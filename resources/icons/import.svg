@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:p="http://www.evolus.vn/Namespace/Pencil"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="32px"
+   height="32px"
+   id="svg2985"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="New document 2">
+  <defs
+     id="defs2987" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="11.197802"
+     inkscape:cx="16"
+     inkscape:cy="16"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:grid-bbox="true"
+     inkscape:document-units="px"
+     inkscape:window-width="1366"
+     inkscape:window-height="706"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata2990">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <g
+       transform="scale(1.3333333,1.3333333)"
+       id="a2d71580906444b982b648716bb56e84"
+       p:def="Evolus:FontAwesomeIcons:icon-download-alt"
+       p:type="Shape"
+       style="fill:#000000"
+       inkscape:export-filename="E:\SVN\One\images\import.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <p:metadata>
+        <p:property
+           name="box">24,24</p:property>
+        <p:property
+           name="withShadow">false</p:property>
+        <p:property
+           name="disabled">false</p:property>
+        <p:property
+           name="shadowColor">#FFFFFFFF</p:property>
+        <p:property
+           name="fillColor">#333333FF</p:property>
+        <p:property
+           name="disabledColor">#AAAAAAFF</p:property>
+      </p:metadata>
+      <defs
+         id="defs2996">
+        <path
+           id="9335dcc3f8aa452ab5ccce4cc584f993"
+           p:name="glyph"
+           transform="matrix(0.015625,0,0,-0.015625,1.6015625,28)"
+           d="M 0,39 V 653 Q 0,669 11.5,680.5 23,692 39,692 h 229 q 16,0 27.5,-11 Q 307,670 307,653 V 307 h 1229 v 346 q 0,16 11.5,27.5 11.5,11.5 27.5,11.5 h 229 q 16,0 27.5,-11 11.5,-11 11.5,-28 V 39 Q 1843,0 1804,0 H 39 Q 0,0 0,39 z M 345.5,944.5 Q 352,961 385,961 h 307 v 499 q 0,31 21.5,53.5 21.5,22.5 54.5,22.5 h 307 q 33,0 55.5,-22.5 Q 1153,1491 1153,1460 V 961 h 307 q 31,0 37,-16.5 6,-16.5 -16,-39.5 L 977,399 Q 954,376 921.5,376.5 889,377 866,399 L 362,905 q -23,23 -16.5,39.5 z"
+           inkscape:connector-curvature="0" />
+      </defs>
+      <g
+         transform="scale(0.75,0.75)"
+         id="e1aaa7bb7a3648b28045b0a2c1f69354"
+         p:name="group"
+         style="fill:#000000">
+        <rect
+           id="rect3000"
+           y="0"
+           x="0"
+           width="32"
+           height="32"
+           style="fill:#000000;fill-opacity:0;stroke:none" />
+        <g
+           id="g3002"
+           transform="translate(1,1)"
+           style="fill:#000000">
+          <use
+             style="fill:#000000;fill-opacity:1;visibility:hidden;display:none"
+             id="b18876fea4a44c16b16ff6adf74a1e34"
+             p:name="shadow"
+             xlink:href="#9335dcc3f8aa452ab5ccce4cc584f993"
+             x="0"
+             y="0"
+             width="1"
+             height="1" />
+        </g>
+        <use
+           style="fill:#000000;fill-opacity:1"
+           id="d73eab51c9a7461d972dac42a05d87f6"
+           p:name="icon"
+           xlink:href="#9335dcc3f8aa452ab5ccce4cc584f993"
+           x="0"
+           y="0"
+           width="1"
+           height="1" />
+      </g>
+    </g>
+  </g>
+</svg>

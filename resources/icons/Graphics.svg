@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:p="http://www.evolus.vn/Namespace/Pencil"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="32"
+   height="32"
+   viewBox="0 0 31.999999 31.999998"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="Graphics.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="-90.100237"
+     inkscape:cy="72.904298"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1018"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-1020.3622)">
+    <g
+       inkscape:label="Layer 1"
+       id="layer1-6"
+       transform="translate(-347.17053,833.27347)">
+      <g
+         style="fill:#000000"
+         p:type="Shape"
+         p:def="Evolus:FontAwesomeIcons:icon-save"
+         id="bd86353af8bc4200a4a0938326386e4d"
+         transform="scale(1.3333333,1.3333333)">
+        <p:metadata>
+          <p:property
+             name="box">24,24</p:property>
+          <p:property
+             name="withShadow">false</p:property>
+          <p:property
+             name="disabled">false</p:property>
+          <p:property
+             name="shadowColor">#FFFFFFFF</p:property>
+          <p:property
+             name="fillColor">#333333FF</p:property>
+          <p:property
+             name="disabledColor">#AAAAAAFF</p:property>
+        </p:metadata>
+        <defs
+           id="defs3188">
+          <path
+             inkscape:connector-curvature="0"
+             d="m 0,154 0,1228 q 0,63 45,108.5 45,45.5 109,45.5 l 1075,0 q 63,0 108,-45 l 154,-154 q 45,-45 45,-108 l 0,-1075 Q 1536,91 1491,45.5 1446,0 1382,0 L 154,0 Q 91,0 45.5,45 0,90 0,154 Z m 154,692 1075,0 0,536 -1075,0 0,-536 z m 692,76 0,385 190,0 0,-385 -190,0 z"
+             transform="matrix(0.015625,0,0,-0.015625,4,28)"
+             p:name="glyph"
+             id="cc3e1cc3972a4e038e87e82926fc0473" />
+        </defs>
+        <g
+           style="fill:#000000"
+           p:name="group"
+           id="e395561b33894764bc3d439a34c28568"
+           transform="scale(0.75,0.75)">
+          <rect
+             style="fill:#000000;fill-opacity:0;stroke:none"
+             height="32"
+             width="32"
+             x="0"
+             y="0"
+             id="rect3192" />
+          <g
+             style="fill:#000000"
+             transform="translate(1,1)"
+             id="g3194">
+            <use
+               height="1"
+               width="1"
+               y="0"
+               x="0"
+               xlink:href="#cc3e1cc3972a4e038e87e82926fc0473"
+               p:name="shadow"
+               id="38796b3335b54f788878d169af265f7b"
+               style="display:none;visibility:hidden;fill:#000000;fill-opacity:1" />
+          </g>
+          <use
+             height="1"
+             width="1"
+             y="0"
+             x="0"
+             xlink:href="#cc3e1cc3972a4e038e87e82926fc0473"
+             p:name="icon"
+             id="661864d193e84f32b60edc9d2a5c6e72"
+             style="fill:#000000;fill-opacity:1" />
+        </g>
+      </g>
+    </g>
+    <g
+       transform="matrix(-1.3333334,0,0,1.3333334,-230.49997,831.07651)"
+       id="a6ca7e2daa2e4e938c93196065330aa2"
+       p:def="Evolus:FontAwesomeIcons:icon-share-alt"
+       p:type="Shape"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <p:metadata>
+        <p:property
+           name="box"><![CDATA[24,24]]></p:property>
+        <p:property
+           name="withShadow"><![CDATA[false]]></p:property>
+        <p:property
+           name="disabled"><![CDATA[false]]></p:property>
+        <p:property
+           name="shadowColor"><![CDATA[#FFFFFFFF]]></p:property>
+        <p:property
+           name="fillColor"><![CDATA[#333333FF]]></p:property>
+        <p:property
+           name="disabledColor"><![CDATA[#AAAAAAFF]]></p:property>
+      </p:metadata>
+      <defs
+         id="defs3361">
+        <path
+           id="a4811d7522ae45df9256cb80d395c8ff"
+           p:name="glyph"
+           transform="matrix(0.015625,0,0,-0.015625,1.6015625,28)"
+           d="M 0,135 Q 0,344 71.5,528.5 143,713 289.5,851 q 146.5,138 371,219 224.5,81 531.5,83 l 0,293 q 0,72 36,87 36,15 89,-36 l 491,-493 q 35,-33 35,-82 0,-47 -35,-82 L 1317,346 q -51,-51 -88,-35.5 -37,15.5 -37,86.5 l 0,330 Q 930,725 731,670.5 532,616 395,523 258,430 180,304 102,178 82,33 78,0 45,0 L 43,0 Q 10,0 6,33 0,84 0,135 Z"
+           inkscape:connector-curvature="0" />
+      </defs>
+      <g
+         transform="scale(0.75,0.75)"
+         id="11202ae1d3f74e0fb25aa5d60288d363"
+         p:name="group">
+        <rect
+           id="rect3365"
+           y="0"
+           x="0"
+           width="32"
+           height="32"
+           fill="rgba(0, 0, 0, 0)"
+           style="fill-opacity:0;stroke:none" />
+        <g
+           id="g3367"
+           transform="translate(1,1)">
+          <use
+             style="display:none;visibility:hidden;fill:#ffffff;fill-opacity:1"
+             id="2cd0b3d7629f47ea9bc50b4d1ac89b94"
+             p:name="shadow"
+             xlink:href="#a4811d7522ae45df9256cb80d395c8ff"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+        </g>
+        <use
+           style="fill:#333333;fill-opacity:1"
+           id="b083b273aca74a23a3e3cf130fe000d9"
+           p:name="icon"
+           xlink:href="#a4811d7522ae45df9256cb80d395c8ff"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       transform="matrix(1.3333334,0,0,1.3333334,-306.71425,832.43361)"
+       id="a6ca7e2daa2e4e938c93196065330aa2-2"
+       p:def="Evolus:FontAwesomeIcons:icon-share-alt"
+       p:type="Shape">
+      <p:metadata>
+        <p:property
+           name="box"><![CDATA[24,24]]></p:property>
+        <p:property
+           name="withShadow"><![CDATA[false]]></p:property>
+        <p:property
+           name="disabled"><![CDATA[false]]></p:property>
+        <p:property
+           name="shadowColor"><![CDATA[#FFFFFFFF]]></p:property>
+        <p:property
+           name="fillColor"><![CDATA[#333333FF]]></p:property>
+        <p:property
+           name="disabledColor"><![CDATA[#AAAAAAFF]]></p:property>
+      </p:metadata>
+      <defs
+         id="defs3361-7">
+        <path
+           id="a4811d7522ae45df9256cb80d395c8ff-4"
+           p:name="glyph"
+           transform="matrix(0.015625,0,0,-0.015625,1.6015625,28)"
+           d="M 0,135 Q 0,344 71.5,528.5 143,713 289.5,851 q 146.5,138 371,219 224.5,81 531.5,83 l 0,293 q 0,72 36,87 36,15 89,-36 l 491,-493 q 35,-33 35,-82 0,-47 -35,-82 L 1317,346 q -51,-51 -88,-35.5 -37,15.5 -37,86.5 l 0,330 Q 930,725 731,670.5 532,616 395,523 258,430 180,304 102,178 82,33 78,0 45,0 L 43,0 Q 10,0 6,33 0,84 0,135 Z"
+           inkscape:connector-curvature="0" />
+      </defs>
+      <g
+         transform="scale(0.75,0.75)"
+         id="11202ae1d3f74e0fb25aa5d60288d363-4"
+         p:name="group">
+        <rect
+           id="rect3365-1"
+           y="0"
+           x="0"
+           width="32"
+           height="32"
+           fill="rgba(0, 0, 0, 0)"
+           style="fill-opacity:0;stroke:none" />
+        <g
+           id="g3367-7"
+           transform="translate(1,1)">
+          <use
+             style="display:none;visibility:hidden;fill:#ffffff;fill-opacity:1"
+             id="2cd0b3d7629f47ea9bc50b4d1ac89b94-2"
+             p:name="shadow"
+             xlink:href="#a4811d7522ae45df9256cb80d395c8ff-4"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+        </g>
+        <use
+           style="fill:#333333;fill-opacity:1"
+           id="b083b273aca74a23a3e3cf130fe000d9-5"
+           p:name="icon"
+           xlink:href="#a4811d7522ae45df9256cb80d395c8ff-4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+  </g>
+</svg>

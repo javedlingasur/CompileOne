@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:p="http://www.evolus.vn/Namespace/Pencil"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="32px"
+   height="32px"
+   id="svg2985"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   inkscape:export-filename="E:\SVN\One\images\save.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"
+   sodipodi:docname="new.svg">
+  <defs
+     id="defs2987" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="11.197802"
+     inkscape:cx="16"
+     inkscape:cy="16"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:grid-bbox="true"
+     inkscape:document-units="px"
+     inkscape:window-width="1366"
+     inkscape:window-height="706"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata2990">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <g
+       transform="scale(1.3333333,1.3333333)"
+       id="bd86353af8bc4200a4a0938326386e4d"
+       p:def="Evolus:FontAwesomeIcons:icon-save"
+       p:type="Shape"
+       style="fill:#000000">
+      <p:metadata>
+        <p:property
+           name="box">24,24</p:property>
+        <p:property
+           name="withShadow">false</p:property>
+        <p:property
+           name="disabled">false</p:property>
+        <p:property
+           name="shadowColor">#FFFFFFFF</p:property>
+        <p:property
+           name="fillColor">#333333FF</p:property>
+        <p:property
+           name="disabledColor">#AAAAAAFF</p:property>
+      </p:metadata>
+      <defs
+         id="defs3188">
+        <path
+           id="cc3e1cc3972a4e038e87e82926fc0473"
+           p:name="glyph"
+           transform="matrix(0.015625,0,0,-0.015625,4,28)"
+           d="m 0,154 v 1228 q 0,63 45,108.5 45,45.5 109,45.5 h 1075 q 63,0 108,-45 l 154,-154 q 45,-45 45,-108 V 154 Q 1536,91 1491,45.5 1446,0 1382,0 H 154 Q 91,0 45.5,45 0,90 0,154 z m 154,692 h 1075 v 536 H 154 V 846 z m 692,76 v 385 h 190 V 922 H 846 z"
+           inkscape:connector-curvature="0" />
+      </defs>
+      <g
+         transform="scale(0.75,0.75)"
+         id="e395561b33894764bc3d439a34c28568"
+         p:name="group"
+         style="fill:#000000">
+        <rect
+           id="rect3192"
+           y="0"
+           x="0"
+           width="32"
+           height="32"
+           style="fill:#000000;fill-opacity:0;stroke:none" />
+        <g
+           id="g3194"
+           transform="translate(1,1)"
+           style="fill:#000000">
+          <use
+             style="fill:#000000;fill-opacity:1;visibility:hidden;display:none"
+             id="38796b3335b54f788878d169af265f7b"
+             p:name="shadow"
+             xlink:href="#cc3e1cc3972a4e038e87e82926fc0473"
+             x="0"
+             y="0"
+             width="1"
+             height="1" />
+        </g>
+        <use
+           style="fill:#000000;fill-opacity:1"
+           id="661864d193e84f32b60edc9d2a5c6e72"
+           p:name="icon"
+           xlink:href="#cc3e1cc3972a4e038e87e82926fc0473"
+           x="0"
+           y="0"
+           width="1"
+           height="1" />
+      </g>
+    </g>
+  </g>
+</svg>

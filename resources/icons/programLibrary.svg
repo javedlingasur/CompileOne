@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:p="http://www.evolus.vn/Namespace/Pencil"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="32px"
+   height="32px"
+   id="svg2985"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="export.svg"
+   inkscape:export-filename="E:\SVN\One\images\export.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs2987" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="11.197802"
+     inkscape:cx="16"
+     inkscape:cy="16"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:grid-bbox="true"
+     inkscape:document-units="px"
+     inkscape:window-width="1366"
+     inkscape:window-height="706"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata2990">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <g
+       transform="scale(1.3333333,1.3333333)"
+       id="17a509d5502b457ba31c050d4ac8aeb7"
+       p:def="Evolus:FontAwesomeIcons:icon-book"
+       p:type="Shape"
+       style="fill:#000000"
+       inkscape:export-filename="E:\SVN\One\images\progralLibrary.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <p:metadata>
+        <p:property
+           name="box">24,24</p:property>
+        <p:property
+           name="withShadow">false</p:property>
+        <p:property
+           name="disabled">false</p:property>
+        <p:property
+           name="shadowColor">#FFFFFFFF</p:property>
+        <p:property
+           name="fillColor">#333333FF</p:property>
+        <p:property
+           name="disabledColor">#AAAAAAFF</p:property>
+      </p:metadata>
+      <defs
+         id="defs3035">
+        <path
+           id="005648366e154ede983d431acc9f73c3"
+           p:name="glyph"
+           transform="matrix(0.015625,0,0,-0.015625,2.640625,28)"
+           d="m 10,311 q 2,16 4,31.5 2,15.5 4,34.5 0,10 -4,20.5 -4,10.5 -2,20.5 2,16 15.5,31.5 Q 41,465 53,485 76,522 98.5,575.5 121,629 131,668 q 4,16 -1,30.5 -5,14.5 -1,26.5 4,16 16.5,27.5 12.5,11.5 20.5,23.5 10,18 21.5,42 11.5,24 21.5,49.5 10,25.5 16,50 6,24.5 8,40.5 2,16 -2,33 -4,17 0,29 6,16 20.5,26.5 14.5,10.5 24.5,24.5 10,12 21.5,34.5 11.5,22.5 23,49.5 11.5,27 19.5,52.5 8,25.5 10,45.5 2,12 -4,24.5 -6,12.5 -2,27.5 4,14 18.5,29.5 14.5,15.5 26.5,31.5 16,25 28.5,58.5 12.5,33.5 30,61 17.5,27.5 46,43 28.5,15.5 77.5,1.5 l -2,-4 q 31,10 54,10 h 780 q 78,0 119,-57 41,-53 18,-129 L 1257,444 Q 1239,381 1179.5,337 1120,293 1053,293 H 160 q -10,0 -20.5,-2 -10.5,-2 -18.5,-12 -12,-20 0,-56 16,-43 60,-75.5 44,-32.5 87,-32.5 h 946 q 29,0 57.5,21.5 28.5,21.5 37.5,47.5 l 309,987 q 4,16 5,29.5 1,13.5 -1,28.5 41,-14 61,-43 41,-53 19,-129 L 1419,152 Q 1401,86 1341.5,43 1282,0 1214,0 H 268 Q 227,0 188.5,14.5 150,29 115,53.5 80,78 53.5,111.5 27,145 12,184 -13,252 10,311 z m 490,650 q -10,-39 26,-39 h 615 q 16,0 30.5,11 14.5,11 18.5,28 l 24,75 q 4,16 -3,27.5 -7,11.5 -23,11.5 H 573 q -16,0 -31.5,-11 -15.5,-11 -19.5,-28 z m 69,229 q -4,-16 3.5,-26.5 Q 580,1153 596,1153 h 614 q 16,0 30.5,10.5 14.5,10.5 21.5,26.5 l 22,78 q 4,16 -3,27.5 -7,11.5 -24,11.5 H 643 q -16,0 -30.5,-11.5 Q 598,1284 592,1268 z"
+           inkscape:connector-curvature="0" />
+      </defs>
+      <g
+         transform="scale(0.75,0.75)"
+         id="6a159081c04d433486618b52ed9ce6b8"
+         p:name="group"
+         style="fill:#000000">
+        <rect
+           id="rect3039"
+           y="0"
+           x="0"
+           width="32"
+           height="32"
+           style="fill:#000000;fill-opacity:0;stroke:none" />
+        <g
+           id="g3041"
+           transform="translate(1,1)"
+           style="fill:#000000">
+          <use
+             style="fill:#000000;fill-opacity:1;visibility:hidden;display:none"
+             id="e21601c6cc6a4523a8b57eaec959dbb9"
+             p:name="shadow"
+             xlink:href="#005648366e154ede983d431acc9f73c3"
+             x="0"
+             y="0"
+             width="1"
+             height="1" />
+        </g>
+        <use
+           style="fill:#000000;fill-opacity:1"
+           id="fb4f2653413f4e0188b0067efede138f"
+           p:name="icon"
+           xlink:href="#005648366e154ede983d431acc9f73c3"
+           x="0"
+           y="0"
+           width="1"
+           height="1" />
+      </g>
+    </g>
+  </g>
+</svg>

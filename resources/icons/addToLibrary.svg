@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:p="http://www.evolus.vn/Namespace/Pencil"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="32px"
+   height="32px"
+   id="svg3020"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   inkscape:export-filename="E:\SVN\One\images\addToLibrary.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"
+   sodipodi:docname="New document 3">
+  <defs
+     id="defs3022" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="11.197802"
+     inkscape:cx="16"
+     inkscape:cy="16"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:grid-bbox="true"
+     inkscape:document-units="px"
+     inkscape:window-width="1366"
+     inkscape:window-height="706"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3025">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <g
+       transform="matrix(1.0909091,0,0,1,4,4)"
+       id="06b3398cafc341058c67b8b02609404a"
+       p:def="glyphish_icons.Icons:42-photos"
+       p:type="Shape">
+      <p:metadata>
+        <p:property
+           name="box">22,24</p:property>
+        <p:property
+           name="imageData">22,24,data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAYCAYAAAD+vg1LAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFNJREFUeNpiZGBg+M9ABfD//39GZD4TAw3BfwpdjVU/CxUcxohNkAWHCygGNAtjFlK9SGSY087FowaPGjxABv8fDQq6F0IUhTnjkCuPh57BAAEGAAcfDSu/A2qNAAAAAElFTkSuQmCC</p:property>
+        <p:property
+           name="withBlur">false</p:property>
+        <p:property
+           name="fillColor">#FFFFFF00</p:property>
+        <p:property
+           name="strokeColor">#000000FF</p:property>
+        <p:property
+           name="strokeStyle">0|</p:property>
+      </p:metadata>
+      <defs
+         id="defs3031">
+        <filter
+           id="2c36002bda0943cd86141a90c03de311"
+           p:name="imageShading"
+           x="-0.03198"
+           width="1.06396"
+           y="-0.12792"
+           height="1.2558399"
+           color-interpolation-filters="sRGB">
+          <feGaussianBlur
+             id="feGaussianBlur3034"
+             in="SourceAlpha"
+             stdDeviation="1.3325" />
+        </filter>
+        <g
+           id="6f18961fa0d947959ccf13acb8436d40"
+           p:name="container">
+          <rect
+             height="24"
+             width="22"
+             id="1e2d91e72c15404cb5d0fe33de590524"
+             p:name="bgRect"
+             style="fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:0;stroke-opacity:1"
+             x="0"
+             y="0" />
+          <g
+             id="a79f564ca2ea44e6ae6f5a6886c4240b"
+             p:name="imageContainer">
+            <image
+               height="24"
+               width="22"
+               xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAYCAYAAAD+vg1LAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFNJREFUeNpiZGBg+M9ABfD//39GZD4TAw3BfwpdjVU/CxUcxohNkAWHCygGNAtjFlK9SGSY087FowaPGjxABv8fDQq6F0IUhTnjkCuPh57BAAEGAAcfDSu/A2qNAAAAAElFTkSuQmCC"
+               id="753b07f21f284f72a732ef2bcc3c3298"
+               p:name="image"
+               y="0"
+               x="0" />
+          </g>
+        </g>
+      </defs>
+      <use
+         id="f056f8130eaa441cb4de00ffeb46919f"
+         p:name="bgCopy"
+         style="opacity:0.6;visibility:hidden;display:none"
+         p:filter="url(#2c36002bda0943cd86141a90c03de311)"
+         transform="translate(1,1)"
+         xlink:href="#6f18961fa0d947959ccf13acb8436d40"
+         x="0"
+         y="0"
+         width="1"
+         height="1" />
+      <use
+         id="use3041"
+         xlink:href="#6f18961fa0d947959ccf13acb8436d40"
+         x="0"
+         y="0"
+         width="1"
+         height="1" />
+    </g>
+    <g
+       transform="matrix(0.76185803,0,0,0.76185803,12.414623,10.836604)"
+       id="51dfc0f09b6a4da1a1cec0f8946e79d6"
+       p:def="glyphish_icons.Icons:plus"
+       p:type="Shape">
+      <p:metadata>
+        <p:property
+           name="box">15,15</p:property>
+        <p:property
+           name="imageData">15,15,data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACZJREFUeNpiZMAN/iOxGbEpYGKgAIxEzYxooTqEnD2aSOilGSDAAB3NAxtAtv94AAAAAElFTkSuQmCC</p:property>
+        <p:property
+           name="withBlur">false</p:property>
+        <p:property
+           name="fillColor">#FFFFFF00</p:property>
+        <p:property
+           name="strokeColor">#000000FF</p:property>
+        <p:property
+           name="strokeStyle">0|</p:property>
+      </p:metadata>
+      <defs
+         id="defs3062">
+        <filter
+           id="b2cb9512ec7a42cf844aef5cc79dbdf9"
+           p:name="imageShading"
+           x="-0.03198"
+           width="1.06396"
+           y="-0.12792"
+           height="1.2558399"
+           color-interpolation-filters="sRGB">
+          <feGaussianBlur
+             id="feGaussianBlur3065"
+             in="SourceAlpha"
+             stdDeviation="1.3325" />
+        </filter>
+        <g
+           id="009b6dd9fb0441f69bca86c7448ff586"
+           p:name="container">
+          <rect
+             height="15"
+             width="15"
+             id="9d7906058d234ff38b55c83eb903a172"
+             p:name="bgRect"
+             style="fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:0;stroke-opacity:1"
+             x="0"
+             y="0" />
+          <g
+             id="e35d31fd8d194021971e27ee67db3706"
+             p:name="imageContainer">
+            <image
+               height="15"
+               width="15"
+               xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACZJREFUeNpiZMAN/iOxGbEpYGKgAIxEzYxooTqEnD2aSOilGSDAAB3NAxtAtv94AAAAAElFTkSuQmCC"
+               id="3de3d865c5ef426c98f1c373de335c1f"
+               p:name="image"
+               y="0"
+               x="0" />
+          </g>
+        </g>
+      </defs>
+      <use
+         id="be5e037faad34472866f31a0affa3410"
+         p:name="bgCopy"
+         style="opacity:0.6;visibility:hidden;display:none"
+         p:filter="url(#b2cb9512ec7a42cf844aef5cc79dbdf9)"
+         transform="translate(1,1)"
+         xlink:href="#009b6dd9fb0441f69bca86c7448ff586"
+         x="0"
+         y="0"
+         width="1"
+         height="1" />
+      <use
+         id="use3072"
+         xlink:href="#009b6dd9fb0441f69bca86c7448ff586"
+         x="0"
+         y="0"
+         width="1"
+         height="1" />
+    </g>
+  </g>
+</svg>
