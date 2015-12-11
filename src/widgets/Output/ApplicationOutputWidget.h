@@ -19,29 +19,30 @@
 *OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 *SOFTWARE.
 ***************************************************************************/
-#ifndef CHANGEWORKSPACEWIDGET_H
-#define CHANGEWORKSPACEWIDGET_H
 
-#include <QWidget>
-#include "../../utility/SettingsManager.h"
+#pragma once
 
-namespace Ui {
-class ChangeWorkSpaceWidget;
-}
+#include <QPlainTextEdit>
 
-class ChangeWorkSpaceWidget : public QWidget
+#include "OutputBaseWidget.h"
+
+namespace Co {
+namespace Output {
+
+class ApplicationOutputWidget : public OutputBaseWidget
 {
     Q_OBJECT
 
 public:
-    explicit ChangeWorkSpaceWidget(QWidget *parent = 0);
-    ~ChangeWorkSpaceWidget();
+    ApplicationOutputWidget();
 
-private slots:
-    void on_m_BrowseWorkspaceButton_clicked();
+    virtual ~ApplicationOutputWidget();
+
+    QString getName() { return "Application Output"; }
 
 private:
-    Ui::ChangeWorkSpaceWidget *ui;
+    QPlainTextEdit* m_outputPlainTxtEdt;
 };
 
-#endif // CHANGEWORKSPACEWIDGET_H
+}
+}

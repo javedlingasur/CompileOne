@@ -42,3 +42,5 @@ void EditorStatusWidget::update( int line, int column )
     ui->m_lineNoLbl->setText(QString::number(line + 1));
     ui->m_columNoLbl->setText(QString::number(column));
 }
+
+

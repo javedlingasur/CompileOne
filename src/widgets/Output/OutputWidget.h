@@ -20,25 +20,46 @@
 *SOFTWARE.
 ***************************************************************************/
 
-#ifndef OUTPUTWIDGET_H
-#define OUTPUTWIDGET_H
+#pragma once
 
-#include <QWidget>
+#include <QTabWidget>
 
-namespace Ui {
+#include "OutputBaseWidget.h"
+
+namespace Co {
+namespace Output {
+
 class OutputWidget;
-}
+
+class OutputWidgetHolder
+{
+private:
+    static OutputWidget* m_outputWidget;
+
+public:
+    static OutputWidget* getInstance();
+
+    static void setParent( QWidget* );
+};
 
 class OutputWidget : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit OutputWidget(QWidget *parent = 0);
-    ~OutputWidget();
+
+    friend class OutputWidgetHolder;
+
+    void addOutputPage( QString outputName, QWidget* outputWidget );
 
 private:
-    Ui::OutputWidget *ui;
+
+    explicit OutputWidget( QWidget *parent = 0 );
+
+    ~OutputWidget();
+
+    QTabWidget* m_outputTabWidget;
 };
 
-#endif // OUTPUTWIDGET_H
+}
+}

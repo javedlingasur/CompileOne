@@ -9,7 +9,7 @@ FileBrowserWidget::FileBrowserWidget( QWidget *parent )
     vBoxLayout->setContentsMargins(1,1,1,1);
 
     m_fileSystemModel = new QFileSystemModel(this);
-    QString strWorkPath = SettingsManager::Instance()->readSettings( SettingsStrings::WORKSPACE_PATH ).toString();
+    QString strWorkPath = SettingsManager::Instance()->readSettings( Settings::WORKSPACE_PATH ).toString();
     qDebug()<<"strWorkPath " <<strWorkPath;
 //    if( strWorkPath.isEmpty())
 //    {

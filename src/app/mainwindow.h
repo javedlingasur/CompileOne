@@ -32,6 +32,9 @@
 #include "widgets/Library/ProgramLibraryDialog.h"
 #include "widgets/Library/AddToLibraryWidget.h"
 #include "widgets/CodeEditor/EditorStatusWidget.h"
+#include "widgets/Output/OutputWidget.h"
+
+using namespace Co::Output;
 
 #include <Qsci/qsciscintilla.h>
 #include <Qsci/qscilexercpp.h>
@@ -76,8 +79,9 @@ public:
     void initializeMargin();
     void initializeCaretLine();
     void initializeFont();
+    QStringList parseErrorMessage( const QString &compilerOutpur );
 
- public slots:
+public slots:
     void onTextChanged();
 
 private:
@@ -135,7 +139,13 @@ private:
     ProgramLibraryDialog *m_ProgramLibraryDialog;
     AddToLibraryWidget *m_AddToLibraryWidget;
 
+//    OutputBaseWidget* m_OutputWidget;
     EditorStatusWidget* m_EditorStatusWidget;
+
+    OutputBaseWidget::ptr m_errorOutputWidget;
+    OutputBaseWidget::ptr m_compilerOutputWidget;
+    OutputBaseWidget::ptr m_applicationOutputWidget;
+    OutputBaseWidget::ptr m_clipBoardWidget;
 };
 
 #endif

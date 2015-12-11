@@ -19,35 +19,26 @@
 *OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 *SOFTWARE.
 ***************************************************************************/
-#ifndef OPTIONSWIDGET_H
-#define OPTIONSWIDGET_H
+
+#ifndef OUTPUTMENUBARWIDGET_H
+#define OUTPUTMENUBARWIDGET_H
 
 #include <QWidget>
-#include <QListWidget>
-#include <QTabWidget>
 
-#include "CompilerOptionsWidget.h"
-#include "EditorOptionsWidget.h"
+namespace Ui {
+class OutputMenubarWidget;
+}
 
-class OptionsWidget : public QWidget
+class OutputMenubarWidget : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit OptionsWidget(QWidget *parent = 0);
-    ~OptionsWidget();
-
-    void addOptions( QString optionName, QWidget* optionWidget );
-
-public slots:
-    void ShowOptions( QString optionName );
+    explicit OutputMenubarWidget(QWidget *parent = 0);
+    ~OutputMenubarWidget();
 
 private:
-    QListWidget* m_optionsListWidget;
-    QTabWidget* m_optiosTabWidget;
-
-    CompilerOptionsWidget* m_CompilerOptionsWidget;
-    EditorOptionsWidget* m_EditorOptionsWidget;
+    Ui::OutputMenubarWidget *ui;
 };
 
-#endif // OPTIONSWIDGET_H
+#endif // OUTPUTMENUBARWIDGET_H

@@ -19,35 +19,28 @@
 *OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 *SOFTWARE.
 ***************************************************************************/
-#ifndef OPTIONSWIDGET_H
-#define OPTIONSWIDGET_H
 
-#include <QWidget>
-#include <QListWidget>
-#include <QTabWidget>
+#pragma once
 
-#include "CompilerOptionsWidget.h"
-#include "EditorOptionsWidget.h"
+#include <QListView.h>
 
-class OptionsWidget : public QWidget
+#include "OutputBaseWidget.h"
+
+namespace  Co {
+namespace Output {
+
+class ErrorOutputWidget : public OutputBaseWidget
 {
-    Q_OBJECT
-
 public:
-    explicit OptionsWidget(QWidget *parent = 0);
-    ~OptionsWidget();
+    ErrorOutputWidget();
 
-    void addOptions( QString optionName, QWidget* optionWidget );
+    virtual ~ErrorOutputWidget();
 
-public slots:
-    void ShowOptions( QString optionName );
+    QString getName() { return "Errors"; }
 
 private:
-    QListWidget* m_optionsListWidget;
-    QTabWidget* m_optiosTabWidget;
-
-    CompilerOptionsWidget* m_CompilerOptionsWidget;
-    EditorOptionsWidget* m_EditorOptionsWidget;
+    QListView* m_errorListView;
 };
 
-#endif // OPTIONSWIDGET_H
+}
+}

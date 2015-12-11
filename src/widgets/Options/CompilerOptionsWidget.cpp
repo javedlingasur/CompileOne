@@ -19,35 +19,48 @@
 *OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 *SOFTWARE.
 ***************************************************************************/
-#ifndef OPTIONSWIDGET_H
-#define OPTIONSWIDGET_H
-
-#include <QWidget>
-#include <QListWidget>
-#include <QTabWidget>
 
 #include "CompilerOptionsWidget.h"
-#include "EditorOptionsWidget.h"
+#include "ui_CompilerOptionsWidget.h"
 
-class OptionsWidget : public QWidget
+#include <QDebug>
+
+#include "utility/SettingsManager.h"
+
+CompilerOptionsWidget::CompilerOptionsWidget(QWidget *parent) :
+    QWidget(parent),
+    ui(new Ui::CompilerOptionsWidget)
 {
-    Q_OBJECT
+    ui->setupUi(this);
 
-public:
-    explicit OptionsWidget(QWidget *parent = 0);
-    ~OptionsWidget();
+    if( SettingsManager::Instance()->hasSettings( Settings::COMPILER_PATH) )
+    {
+        QString compiler = SettingsManager::Instance()->readSettings(Settings::COMPILER_PATH).toString();
+        ui->m_compilerLineEdit->setText(compiler);
+        qDebug()<< "COMPILER :"<<compiler;
+    }
+}
 
-    void addOptions( QString optionName, QWidget* optionWidget );
+CompilerOptionsWidget::~CompilerOptionsWidget()
+{
+    delete ui;
+}
 
-public slots:
-    void ShowOptions( QString optionName );
+void CompilerOptionsWidget::on_m_compilerSelectBtn_clicked()
+{
+    QString file = QFileDialog::getOpenFileName(this, tr("Compiler"),
+                                                "/home","*");
+    if( ! file.isEmpty() )
+    {
+        ui->m_compilerLineEdit->setText( file );
+    }
+}
 
-private:
-    QListWidget* m_optionsListWidget;
-    QTabWidget* m_optiosTabWidget;
-
-    CompilerOptionsWidget* m_CompilerOptionsWidget;
-    EditorOptionsWidget* m_EditorOptionsWidget;
-};
-
-#endif // OPTIONSWIDGET_H
+void CompilerOptionsWidget::on_m_compilerLineEdit_returnPressed()
+{
+    if( !ui->m_compilerLineEdit->text().isEmpty() )
+    {
+        SettingsManager::Instance()->writeSetting( Settings::COMPILER_PATH,
+                                                   ui->m_compilerLineEdit->text() );
+    }
+}

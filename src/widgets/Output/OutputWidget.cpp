@@ -21,16 +21,48 @@
 ***************************************************************************/
 
 #include "OutputWidget.h"
-#include "ui_OutputWidget.h"
 
-OutputWidget::OutputWidget(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::OutputWidget)
+#include <QBoxLayout>
+
+namespace Co {
+namespace Output {
+
+
+OutputWidget* OutputWidgetHolder::m_outputWidget = NULL;
+
+void OutputWidgetHolder::setParent( QWidget* widget )
 {
-    ui->setupUi(this);
+    OutputWidgetHolder::m_outputWidget = new OutputWidget( widget );
+}
+OutputWidget* OutputWidgetHolder::getInstance()
+{
+    return m_outputWidget;
+}
+
+
+OutputWidget::OutputWidget( QWidget *parent )
+    : QWidget( parent )
+    , m_outputTabWidget( 0 )
+{
+    m_outputTabWidget = new QTabWidget( this );
+    m_outputTabWidget->setTabPosition( QTabWidget::South );
+
+    QVBoxLayout *vBoxLayout = new QVBoxLayout;
+    vBoxLayout->setContentsMargins( 0, 0, 0, 0 );
+    vBoxLayout->addWidget( m_outputTabWidget );
+
+    this->setLayout( vBoxLayout );
 }
 
 OutputWidget::~OutputWidget()
 {
-    delete ui;
+
+}
+
+void OutputWidget::addOutputPage( QString outputName, QWidget* outputWidget )
+{
+    m_outputTabWidget->addTab( outputWidget,outputName );
+}
+
+}
 }

@@ -19,7 +19,7 @@ FileOperations AddToLibraryController::AddToLibrary( std::string strName,
                                                      std::string strFilePath)
 {
     std::string strLibPath = SettingsManager::Instance()->
-                             readSettings(SettingsStrings::WORKSPACE_PATH).toString().toStdString();
+                             readSettings(Settings::WORKSPACE_PATH).toString().toStdString();
 
     strLibPath = strLibPath + "/" + strName + ".cpp";
 

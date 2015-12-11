@@ -19,35 +19,31 @@
 *OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 *SOFTWARE.
 ***************************************************************************/
-#ifndef OPTIONSWIDGET_H
-#define OPTIONSWIDGET_H
 
-#include <QWidget>
-#include <QListWidget>
-#include <QTabWidget>
+#include "ErrorOutputWidget.h"
 
-#include "CompilerOptionsWidget.h"
-#include "EditorOptionsWidget.h"
+#include <QBoxLayout>
 
-class OptionsWidget : public QWidget
+namespace Co {
+namespace Output {
+
+ErrorOutputWidget::ErrorOutputWidget()
+    :m_errorListView( 0 )
 {
-    Q_OBJECT
+    m_errorListView = new QListView(this);
 
-public:
-    explicit OptionsWidget(QWidget *parent = 0);
-    ~OptionsWidget();
+    m_errorListView->setFrameStyle(QFrame::NoFrame);
+    QVBoxLayout *vBoxLayout = new QVBoxLayout;
+    vBoxLayout->setContentsMargins(0,0,0,0);
+    vBoxLayout->addWidget(m_errorListView);
 
-    void addOptions( QString optionName, QWidget* optionWidget );
+    this->setLayout(vBoxLayout);
+}
 
-public slots:
-    void ShowOptions( QString optionName );
+ErrorOutputWidget::~ErrorOutputWidget()
+{
 
-private:
-    QListWidget* m_optionsListWidget;
-    QTabWidget* m_optiosTabWidget;
+}
 
-    CompilerOptionsWidget* m_CompilerOptionsWidget;
-    EditorOptionsWidget* m_EditorOptionsWidget;
-};
-
-#endif // OPTIONSWIDGET_H
+}
+}

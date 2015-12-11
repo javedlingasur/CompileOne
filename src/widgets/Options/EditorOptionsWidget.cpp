@@ -19,35 +19,18 @@
 *OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 *SOFTWARE.
 ***************************************************************************/
-#ifndef OPTIONSWIDGET_H
-#define OPTIONSWIDGET_H
 
-#include <QWidget>
-#include <QListWidget>
-#include <QTabWidget>
-
-#include "CompilerOptionsWidget.h"
 #include "EditorOptionsWidget.h"
+#include "ui_EditorOptionsWidget.h"
 
-class OptionsWidget : public QWidget
+EditorOptionsWidget::EditorOptionsWidget(QWidget *parent) :
+    QWidget(parent),
+    ui(new Ui::EditorOptionsWidget)
 {
-    Q_OBJECT
+    ui->setupUi(this);
+}
 
-public:
-    explicit OptionsWidget(QWidget *parent = 0);
-    ~OptionsWidget();
-
-    void addOptions( QString optionName, QWidget* optionWidget );
-
-public slots:
-    void ShowOptions( QString optionName );
-
-private:
-    QListWidget* m_optionsListWidget;
-    QTabWidget* m_optiosTabWidget;
-
-    CompilerOptionsWidget* m_CompilerOptionsWidget;
-    EditorOptionsWidget* m_EditorOptionsWidget;
-};
-
-#endif // OPTIONSWIDGET_H
+EditorOptionsWidget::~EditorOptionsWidget()
+{
+    delete ui;
+}

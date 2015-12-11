@@ -43,6 +43,7 @@
 #include "mainwindow.h"
 #include "utility/SettingsManager.h"
 #include "widgets/Workspace/WorkspaceDialog.h"
+#include <QStyleFactory>
 
 class Thread : public QThread
 {
@@ -63,7 +64,7 @@ int main(int argc, char *argv[])
     MainWindow mainWin;
     mainWin.show();
 
-    QString qstrWorkPath = SettingsManager::Instance()->readSettings( SettingsStrings::WORKSPACE_PATH ).toString();
+    QString qstrWorkPath = SettingsManager::Instance()->readSettings( Settings::WORKSPACE_PATH ).toString();
     if( qstrWorkPath.isEmpty() )
     {
         qDebug()<<" WORKSPACE_FILE not found!!";
@@ -73,12 +74,23 @@ int main(int argc, char *argv[])
         }
         else
         {
-           qDebug()<<" PATH = "<< SettingsManager::Instance()->readSettings( SettingsStrings::WORKSPACE_PATH ).toString();
-           mainWin.setWorkspacePath( SettingsManager::Instance()->readSettings( SettingsStrings::WORKSPACE_PATH ).toString() );
+           qDebug()<<" PATH = "<< SettingsManager::Instance()->readSettings( Settings::WORKSPACE_PATH ).toString();
+           mainWin.setWorkspacePath( SettingsManager::Instance()->readSettings( Settings::WORKSPACE_PATH ).toString() );
         }
     }
 //    Thread::msleep(100);
-    mainWin.setWorkspacePath( SettingsManager::Instance()->readSettings( SettingsStrings::WORKSPACE_PATH ).toString() );
+    mainWin.setWorkspacePath( SettingsManager::Instance()->readSettings( Settings::WORKSPACE_PATH ).toString() );
+
+//    QFile file(":/skins/darkorange.qss");
+//        if(file.open(QIODevice::ReadOnly | QIODevice::Text))
+//        {
+//            app.setStyleSheet(file.readAll());
+//            file.close();
+//        }
+
+
+    app.setStyle(QStyleFactory::create("fusion"));
+
     return app.exec();
 }
 

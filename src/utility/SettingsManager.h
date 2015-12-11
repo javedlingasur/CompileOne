@@ -43,13 +43,18 @@ public:
 
     void writeSetting(const QString &key, const QVariant &variant);
 
+    void removeSettings( const QString &key );
+
+    bool hasSettings( const QString &key );
+
 private:
     QSettings *m_QSettings;
 
     QString m_strSettingsFile;
 };
 
-namespace SettingsStrings
+namespace Settings
 {
     const char* const WORKSPACE_PATH = "WORKSPACE_PATH";
+    const char* const COMPILER_PATH = "COMPILER_PATH";
 }

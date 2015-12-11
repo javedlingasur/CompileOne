@@ -19,35 +19,30 @@
 *OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 *SOFTWARE.
 ***************************************************************************/
-#ifndef OPTIONSWIDGET_H
-#define OPTIONSWIDGET_H
 
-#include <QWidget>
-#include <QListWidget>
-#include <QTabWidget>
+#pragma once
 
-#include "CompilerOptionsWidget.h"
-#include "EditorOptionsWidget.h"
+#include <QPlainTextEdit>
 
-class OptionsWidget : public QWidget
+#include "OutputBaseWidget.h"
+
+namespace Co {
+namespace Output {
+
+class ClipBoardWidget : public OutputBaseWidget
 {
-    Q_OBJECT
-
 public:
-    explicit OptionsWidget(QWidget *parent = 0);
-    ~OptionsWidget();
 
-    void addOptions( QString optionName, QWidget* optionWidget );
+    ClipBoardWidget();
 
-public slots:
-    void ShowOptions( QString optionName );
+    virtual ~ClipBoardWidget();
+
+    QString getName() { return "Clip Board"; }
 
 private:
-    QListWidget* m_optionsListWidget;
-    QTabWidget* m_optiosTabWidget;
+    QPlainTextEdit* m_clipboardTxtEdit;
 
-    CompilerOptionsWidget* m_CompilerOptionsWidget;
-    EditorOptionsWidget* m_EditorOptionsWidget;
 };
 
-#endif // OPTIONSWIDGET_H
+}
+}

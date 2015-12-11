@@ -39,10 +39,17 @@
 ****************************************************************************/
 
 #include <QtWidgets>
+#include <functional>
+#include <memory>
 
 #include "mainwindow.h"
 
 #include "core/CompileSource.h"
+
+#include "widgets/Output/ErrorOutputWidget.h"
+#include "widgets/Output/CompilerOutputWidget.h"
+#include "widgets/Output/ApplicationOutputWidget.h"
+#include "widgets/Output/ClipBoardWidget.h"
 
 MainWindow::MainWindow(QWidget *parent):
     QMainWindow( parent ),
@@ -51,6 +58,7 @@ MainWindow::MainWindow(QWidget *parent):
     m_ProgramLibraryDialog( 0 ),
     m_AddToLibraryWidget( 0 ),
     m_EditorStatusWidget( 0 )
+//  ,    m_OutputWidget( 0 )
 {
 //    setWindowFlags( Qt::FramelessWindowHint | Qt::WindowMinimizeButtonHint );
     this->setContentsMargins( 1, 1, 1, 1 );
@@ -82,8 +90,29 @@ MainWindow::MainWindow(QWidget *parent):
     m_compileOutputText->setStyleSheet(QLatin1String("background-color: rgb(0, 0, 0);\n"
                                                      "color: rgb(255, 255, 0);"));
 
+//    m_OutputWidget = new OutputBaseWidget( this );
+
     vSplitter->addWidget(m_codeeditor);
-    vSplitter->addWidget(m_compileOutputText);
+//    vSplitter->addWidget(m_OutputWidget);
+    using namespace Co::Output;
+    QWidget* outBaseWidget = new QWidget(this);
+    QVBoxLayout *vBoxLayout1 = new QVBoxLayout;
+    vBoxLayout1->setContentsMargins(0,0,0,0);
+    OutputWidgetHolder::setParent(outBaseWidget);
+    vBoxLayout1->addWidget(OutputWidgetHolder::getInstance());
+
+    using namespace Co::Output;
+    m_errorOutputWidget = std::make_shared< ErrorOutputWidget > ();
+    m_compilerOutputWidget = std::make_shared< CompilerOutputWidget > ();
+    m_applicationOutputWidget = std::make_shared< ApplicationOutputWidget > ();
+    m_clipBoardWidget = std::make_shared< ClipBoardWidget > ();
+
+    OutputWidgetHolder::getInstance()->addOutputPage(m_errorOutputWidget->getName(),m_errorOutputWidget.get());
+    OutputWidgetHolder::getInstance()->addOutputPage(m_compilerOutputWidget->getName(),m_compilerOutputWidget.get());
+    OutputWidgetHolder::getInstance()->addOutputPage(m_applicationOutputWidget->getName(),m_applicationOutputWidget.get());
+    OutputWidgetHolder::getInstance()->addOutputPage(m_clipBoardWidget->getName(),m_clipBoardWidget.get());
+outBaseWidget->setLayout(vBoxLayout1);
+        vSplitter->addWidget(outBaseWidget);
 
     QList<int> vList= vSplitter->sizes();
     vList.replace(0,this->height()/0.3);
@@ -177,7 +206,7 @@ bool MainWindow::save()
 
 bool MainWindow::saveAs()
 {
-    QString qstrWorkPath = SettingsManager::Instance()->readSettings( SettingsStrings::WORKSPACE_PATH ).toString();
+    QString qstrWorkPath = SettingsManager::Instance()->readSettings( Settings::WORKSPACE_PATH ).toString();
     QFileDialog dialog(this);
     dialog.setWindowModality(Qt::WindowModal);
     dialog.setAcceptMode(QFileDialog::AcceptSave);
@@ -287,12 +316,12 @@ void MainWindow::createActions()
     connect(m_codeeditor, SIGNAL(copyAvailable(bool)),
             copyAct, SLOT(setEnabled(bool)));
 
-    compileAct = new QAction(QIcon(":/icons/run.png"),tr("Compile"),this);
+    compileAct = new QAction(QIcon(":/icons/compile.png"),tr("Compile"),this);
     compileAct->setShortcut(QKeySequence(Qt::Key_F9));
     compileAct->setStatusTip(tr("Compile the file"));
     connect(compileAct, SIGNAL(triggered()), this, SLOT(compileCode()));
 
-    runAct = new QAction(QIcon(":/icons/compile.png"),tr("Run"),this);
+    runAct = new QAction(QIcon(":/icons/run.png"),tr("Run"),this);
     runAct->setShortcut(QKeySequence(Qt::Key_R + Qt::CTRL));
     runAct->setStatusTip(tr("Run the compiled file"));
     connect(runAct, SIGNAL(triggered()), this, SLOT(runCode()));
@@ -476,22 +505,42 @@ QString MainWindow::strippedName(const QString &fullFileName)
 
 void MainWindow::compileCode()
 {
-    qDebug()<<"output : "<<curFile;
-//    QFile currentFile = QFile(curFile);
-//    if(currentFile.exists())
-//    {
-        QString output;
-        if(CompileSource::getInstance()->compileThis(curFile, output))
-        {
-            qDebug()<<"output : "<<output;
-        }
+    QString program = SettingsManager::Instance()->readSettings(Settings::COMPILER_PATH).toString();
+    QStringList arguments;
+    arguments << curFile;
 
-//    }
+    QProcess *myProcess = new QProcess(this);
+    myProcess->start(program, arguments);
+
+    myProcess->waitForFinished(-1);
+
+    QString output;
+
+    output = myProcess->readAllStandardError().toStdString().c_str();
+}
+
+QStringList MainWindow::parseErrorMessage( const QString &compilerOutpur )
+{
+    QStringList compilerOutputLines = compilerOutpur.split( "\n" );
+
+    return compilerOutputLines;
 }
 
 void MainWindow::runCode()
 {
+    QString program;
+    QStringList arguments;
 
+     program = "a.exe";
+
+    QProcess *myProcess = new QProcess(this);
+    myProcess->start(program, arguments);
+
+    myProcess->waitForFinished(-1);
+
+    QString output;
+
+    output = myProcess->readAll().toStdString().c_str();
 }
 
 void MainWindow::options()

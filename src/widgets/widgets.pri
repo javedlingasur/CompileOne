@@ -2,22 +2,33 @@ INCLUDEPATH += . ..
 
 ########About Widget########
 HEADERS += \
-    $$PWD/Output/OutputWidget.h
+    $$PWD/Options/CompilerOptionsWidget.h \
+    $$PWD/Options/EditorOptionsWidget.h \
+    $$PWD/Output/CompilerOutputWidget.h \
+    $$PWD/Output/ApplicationOutputWidget.h \
+    $$PWD/Output/ErrorOutputWidget.h \
+    $$PWD/Output/ClipBoardWidget.h \
+    $$PWD/Output/OutputWidget.h \
+    $$PWD/Output/OutputBaseWidget.h \
+    $$PWD/Output/OutputMenubarWidget.h
 SOURCES += \
-    $$PWD/Output/OutputWidget.cpp
+    $$PWD/Options/CompilerOptionsWidget.cpp \
+    $$PWD/Options/EditorOptionsWidget.cpp \
+    $$PWD/Output/CompilerOutputWidget.cpp \
+    $$PWD/Output/ApplicationOutputWidget.cpp \
+    $$PWD/Output/ErrorOutputWidget.cpp \
+    $$PWD/Output/ClipBoardWidget.cpp \
+    $$PWD/Output/OutputWidget.cpp \
+    $$PWD/Output/OutputMenubarWidget.cpp
 FORMS += \
-    $$PWD/Output/OutputWidget.ui
+    $$PWD/Options/CompilerOptionsWidget.ui \
+    $$PWD/Options/EditorOptionsWidget.ui \
+    $$PWD/Output/OutputMenubarWidget.ui
 
 ########Code Editor Widget########
 HEADERS += \
-    $$PWD/CodeEditor/CodeEditor.h \
-    $$PWD/CodeEditor/Highlighter.h \
-    $$PWD/CodeEditor/EditorController.h \
     $$PWD/CodeEditor/EditorStatusWidget.h
 SOURCES += \
-    $$PWD/CodeEditor/CodeEditor.cpp \
-    $$PWD/CodeEditor/Highlighter.cpp \
-    $$PWD/CodeEditor/EditorController.cpp \
     $$PWD/CodeEditor/EditorStatusWidget.cpp
 FORMS += \
     $$PWD/CodeEditor/EditorStatusWidget.ui
@@ -53,16 +64,11 @@ FORMS += \
 HEADERS += \
     $$PWD/Options/OptionsController.h \
     $$PWD/Options/OptionsDialog.h \
-    $$PWD/Options/OptionsWidget.h \
-    $$PWD/Options/ChangeWorkSpaceWidget.h
+    $$PWD/Options/OptionsWidget.h
 SOURCES += \
     $$PWD/Options/OptionsController.cpp \
     $$PWD/Options/OptionsDialog.cpp \
-    $$PWD/Options/OptionsWidget.cpp \
-    $$PWD/Options/ChangeWorkSpaceWidget.cpp
-FORMS += \
-    $$PWD/Options/OptionsWidget.ui \
-    $$PWD/Options/ChangeWorkSpaceWidget.ui
+    $$PWD/Options/OptionsWidget.cpp
 
 ########Workspace Widget########
 HEADERS += \

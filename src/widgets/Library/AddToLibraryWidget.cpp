@@ -20,7 +20,7 @@ void AddToLibraryWidget::on_m_CancelButton_clicked()
 
 void AddToLibraryWidget::on_m_BrowseButton_clicked()
 {
-    QString qstrWorkPath = SettingsManager::Instance()->readSettings( SettingsStrings::WORKSPACE_PATH ).toString();
+    QString qstrWorkPath = SettingsManager::Instance()->readSettings( Settings::WORKSPACE_PATH ).toString();
 
     QFileDialog dialog(this);
     dialog.setWindowModality(Qt::WindowModal);

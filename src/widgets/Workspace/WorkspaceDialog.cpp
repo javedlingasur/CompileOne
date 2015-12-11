@@ -17,7 +17,7 @@ void WorkspaceDialog::on_m_OKButton_clicked()
 {
     if( ! ui->m_workspaceLineEdit->text().isEmpty() )
     {
-        SettingsManager::Instance()->writeSetting( SettingsStrings::WORKSPACE_PATH,
+        SettingsManager::Instance()->writeSetting( Settings::WORKSPACE_PATH,
                                                    ui->m_workspaceLineEdit->text() );
         this->close();
     }

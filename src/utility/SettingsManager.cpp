@@ -26,3 +26,14 @@ void SettingsManager::writeSetting(const QString &key, const QVariant &variant)
 {
     m_QSettings->setValue(key, variant);
 }
+
+void SettingsManager::removeSettings(const QString &key)
+{
+    m_QSettings->remove( key );
+}
+
+bool SettingsManager::hasSettings(const QString &key)
+{
+    return m_QSettings->value( key ).isNull() ? false : true;
+}
+
