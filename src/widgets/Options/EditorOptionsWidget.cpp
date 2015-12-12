@@ -23,11 +23,11 @@
 #include "EditorOptionsWidget.h"
 #include "ui_EditorOptionsWidget.h"
 
-EditorOptionsWidget::EditorOptionsWidget(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::EditorOptionsWidget)
+EditorOptionsWidget::EditorOptionsWidget( QWidget *parent )
+    : QWidget(parent)
+    , ui(new Ui::EditorOptionsWidget)
 {
-    ui->setupUi(this);
+    ui->setupUi( this );
 }
 
 EditorOptionsWidget::~EditorOptionsWidget()

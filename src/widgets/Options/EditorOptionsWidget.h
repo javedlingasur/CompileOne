@@ -20,8 +20,7 @@
 *SOFTWARE.
 ***************************************************************************/
 
-#ifndef EDITOROPTIONSWIDGET_H
-#define EDITOROPTIONSWIDGET_H
+#pragma once
 
 #include <QWidget>
 
@@ -34,12 +33,13 @@ class EditorOptionsWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit EditorOptionsWidget(QWidget *parent = 0);
+    explicit EditorOptionsWidget( QWidget *parent = 0 );
+
     ~EditorOptionsWidget();
 
     QString getName() { return "Editor";  }
+
 private:
     Ui::EditorOptionsWidget *ui;
 };
 
-#endif // EDITOROPTIONSWIDGET_H

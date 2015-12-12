@@ -20,8 +20,7 @@
 *SOFTWARE.
 ***************************************************************************/
 
-#ifndef OUTPUTMENUBARWIDGET_H
-#define OUTPUTMENUBARWIDGET_H
+#pragma once
 
 #include <QWidget>
 
@@ -34,11 +33,10 @@ class OutputMenubarWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit OutputMenubarWidget(QWidget *parent = 0);
+    explicit OutputMenubarWidget( QWidget *parent = 0 );
     ~OutputMenubarWidget();
 
 private:
     Ui::OutputMenubarWidget *ui;
 };
 
-#endif // OUTPUTMENUBARWIDGET_H

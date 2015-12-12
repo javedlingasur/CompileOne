@@ -19,8 +19,8 @@
 *OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 *SOFTWARE.
 ***************************************************************************/
-#ifndef OPTIONSCONTROLLER_H
-#define OPTIONSCONTROLLER_H
+
+#pragma once
 
 class OptionsController
 {
@@ -28,4 +28,3 @@ public:
     OptionsController();
 };
 
-#endif // OPTIONSCONTROLLER_H

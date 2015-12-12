@@ -20,8 +20,7 @@
 *SOFTWARE.
 ***************************************************************************/
 
-#ifndef COMPILEROPTIONSWIDGET_H
-#define COMPILEROPTIONSWIDGET_H
+#pragma once
 
 #include <QWidget>
 
@@ -34,7 +33,7 @@ class CompilerOptionsWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit CompilerOptionsWidget(QWidget *parent = 0);
+    explicit CompilerOptionsWidget( QWidget *parent = 0 );
     ~CompilerOptionsWidget();
 
     QString getName() { return "Compiler";  }
@@ -48,4 +47,3 @@ private:
     Ui::CompilerOptionsWidget *ui;
 };
 
-#endif // COMPILEROPTIONSWIDGET_H

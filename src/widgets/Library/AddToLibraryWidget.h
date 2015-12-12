@@ -22,8 +22,6 @@
 #pragma once
 
 #include <QDialog>
-#include "../../utility/SettingsManager.h"
-#include "AddToLibraryController.h"
 
 namespace Ui {
 class AddToLibraryWidget;
@@ -34,7 +32,8 @@ class AddToLibraryWidget : public QDialog
     Q_OBJECT
 
 public:
-    explicit AddToLibraryWidget(QWidget *parent = 0);
+    explicit AddToLibraryWidget( QWidget *parent = 0 );
+
     ~AddToLibraryWidget();
 
 private slots:

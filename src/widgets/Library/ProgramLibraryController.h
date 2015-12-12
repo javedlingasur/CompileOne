@@ -19,13 +19,11 @@
 *OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 *SOFTWARE.
 ***************************************************************************/
-#ifndef PROGRAMLIBRARYCONTROLLER_H
-#define PROGRAMLIBRARYCONTROLLER_H
+
+#pragma once
 
 class ProgramLibraryController
 {
 public:
     ProgramLibraryController();
 };
-
-#endif // PROGRAMLIBRARYCONTROLLER_H

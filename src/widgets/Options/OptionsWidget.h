@@ -19,8 +19,7 @@
 *OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 *SOFTWARE.
 ***************************************************************************/
-#ifndef OPTIONSWIDGET_H
-#define OPTIONSWIDGET_H
+#pragma once
 
 #include <QWidget>
 #include <QListWidget>
@@ -34,7 +33,7 @@ class OptionsWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit OptionsWidget(QWidget *parent = 0);
+    explicit OptionsWidget( QWidget *parent = 0 );
     ~OptionsWidget();
 
     void addOptions( QString optionName, QWidget* optionWidget );
@@ -50,4 +49,3 @@ private:
     EditorOptionsWidget* m_EditorOptionsWidget;
 };
 
-#endif // OPTIONSWIDGET_H

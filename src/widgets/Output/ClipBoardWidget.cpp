@@ -30,14 +30,14 @@ namespace Output {
 ClipBoardWidget::ClipBoardWidget()
     :m_clipboardTxtEdit( 0 )
 {
-    m_clipboardTxtEdit = new QPlainTextEdit(this);
+    m_clipboardTxtEdit = new QPlainTextEdit( this );
 
-    m_clipboardTxtEdit->setFrameStyle(QFrame::NoFrame);
+    m_clipboardTxtEdit->setFrameStyle( QFrame::NoFrame );
     QVBoxLayout *vBoxLayout = new QVBoxLayout;
-    vBoxLayout->setContentsMargins(0,0,0,0);
-    vBoxLayout->addWidget(m_clipboardTxtEdit);
+    vBoxLayout->setContentsMargins( 0, 0, 0, 0 );
+    vBoxLayout->addWidget( m_clipboardTxtEdit );
 
-    this->setLayout(vBoxLayout);
+    this->setLayout( vBoxLayout );
 }
 
 ClipBoardWidget::~ClipBoardWidget()

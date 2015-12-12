@@ -28,16 +28,16 @@ namespace Co {
 namespace Output {
 
 ErrorOutputWidget::ErrorOutputWidget()
-    :m_errorListView( 0 )
+    : m_errorListView( 0 )
 {
-    m_errorListView = new QListView(this);
+    m_errorListView = new QListView( this );
 
-    m_errorListView->setFrameStyle(QFrame::NoFrame);
+    m_errorListView->setFrameStyle( QFrame::NoFrame );
     QVBoxLayout *vBoxLayout = new QVBoxLayout;
-    vBoxLayout->setContentsMargins(0,0,0,0);
-    vBoxLayout->addWidget(m_errorListView);
+    vBoxLayout->setContentsMargins( 0, 0, 0, 0 );
+    vBoxLayout->addWidget( m_errorListView );
 
-    this->setLayout(vBoxLayout);
+    this->setLayout( vBoxLayout );
 }
 
 ErrorOutputWidget::~ErrorOutputWidget()

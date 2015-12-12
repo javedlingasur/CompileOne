@@ -19,8 +19,8 @@
 *OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 *SOFTWARE.
 ***************************************************************************/
-#ifndef PROGRAMLIBRARYTOOLBAR_H
-#define PROGRAMLIBRARYTOOLBAR_H
+
+#pragma once
 
 #include <QWidget>
 
@@ -33,11 +33,11 @@ class ProgramLibraryToolbar : public QWidget
     Q_OBJECT
 
 public:
-    explicit ProgramLibraryToolbar(QWidget *parent = 0);
+    explicit ProgramLibraryToolbar( QWidget *parent = 0 );
+
     ~ProgramLibraryToolbar();
 
 private:
     Ui::ProgramLibraryToolbar *ui;
 };
 
-#endif // PROGRAMLIBRARYTOOLBAR_H

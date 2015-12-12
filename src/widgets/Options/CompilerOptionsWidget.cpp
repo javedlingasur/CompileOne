@@ -28,16 +28,17 @@
 
 #include "utility/SettingsManager.h"
 
-CompilerOptionsWidget::CompilerOptionsWidget(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::CompilerOptionsWidget)
+CompilerOptionsWidget::CompilerOptionsWidget( QWidget *parent )
+    : QWidget(parent)
+    , ui(new Ui::CompilerOptionsWidget)
 {
-    ui->setupUi(this);
+    ui->setupUi( this );
 
-    if( SettingsManager::Instance()->hasSettings( Settings::COMPILER_PATH) )
+    if( SettingsManager::Instance()->hasSettings( Settings::COMPILER_PATH ))
     {
-        QString compiler = SettingsManager::Instance()->readSettings(Settings::COMPILER_PATH).toString();
-        ui->m_compilerLineEdit->setText(compiler);
+        QString compiler = SettingsManager::Instance()->readSettings(
+                    Settings::COMPILER_PATH ).toString();
+        ui->m_compilerLineEdit->setText( compiler );
         qDebug()<< "COMPILER :"<<compiler;
     }
 }
@@ -49,8 +50,10 @@ CompilerOptionsWidget::~CompilerOptionsWidget()
 
 void CompilerOptionsWidget::on_m_compilerSelectBtn_clicked()
 {
-    QString file = QFileDialog::getOpenFileName(this, tr("Compiler"),
-                                                "/home","*");
+    QString file = QFileDialog::getOpenFileName( this,
+                                                 tr("Compiler"),
+                                                 "/home",
+                                                 "*" );
     if( ! file.isEmpty() )
     {
         ui->m_compilerLineEdit->setText( file );
@@ -61,7 +64,8 @@ void CompilerOptionsWidget::on_m_compilerLineEdit_returnPressed()
 {
     if( !ui->m_compilerLineEdit->text().isEmpty() )
     {
-        SettingsManager::Instance()->writeSetting( Settings::COMPILER_PATH,
-                                                   ui->m_compilerLineEdit->text() );
+        SettingsManager::Instance()->writeSetting(
+                    Settings::COMPILER_PATH,
+                    ui->m_compilerLineEdit->text() );
     }
 }

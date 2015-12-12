@@ -19,11 +19,9 @@
 *OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 *SOFTWARE.
 ***************************************************************************/
-#ifndef WORKSPACEDIALOG_H
-#define WORKSPACEDIALOG_H
+#pragma once
 
 #include <QDialog>
-#include "../../utility/SettingsManager.h"
 
 namespace Ui {
 class WorkspaceDialog;
@@ -46,4 +44,3 @@ private:
     Ui::WorkspaceDialog *ui;
 };
 
-#endif // WORKSPACEDIALOG_H

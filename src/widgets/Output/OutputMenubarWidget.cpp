@@ -23,11 +23,11 @@
 #include "OutputMenubarWidget.h"
 #include "ui_OutputMenubarWidget.h"
 
-OutputMenubarWidget::OutputMenubarWidget(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::OutputMenubarWidget)
+OutputMenubarWidget::OutputMenubarWidget( QWidget *parent )
+    : QWidget( parent )
+    , ui( new Ui::OutputMenubarWidget )
 {
-    ui->setupUi(this);
+    ui->setupUi( this );
 }
 
 OutputMenubarWidget::~OutputMenubarWidget()

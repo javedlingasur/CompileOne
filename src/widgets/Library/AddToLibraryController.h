@@ -21,7 +21,7 @@
 ***************************************************************************/
 #pragma once
 
-#include "../../utility/SettingsManager.h"
+#include <string>
 
 enum FileOperations
 {
@@ -37,13 +37,13 @@ public:
     static AddToLibraryController* Instance();
 
     FileOperations AddToLibrary( std::string strName,
-                                 std::string strFilePath);
+                                 std::string strFilePath );
 private:
     AddToLibraryController();
 
-    AddToLibraryController(AddToLibraryController const&){}
+    AddToLibraryController( AddToLibraryController const& ){}
 
-    AddToLibraryController& operator=(AddToLibraryController const&){}
+    AddToLibraryController& operator=( AddToLibraryController const& ){}
 
     static AddToLibraryController* m_pInstance;
 };

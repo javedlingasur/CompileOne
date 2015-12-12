@@ -31,15 +31,18 @@ class ProgramLibraryWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit ProgramLibraryWidget(QWidget *parent = 0);
+    explicit ProgramLibraryWidget( QWidget *parent = 0 );
+
     ~ProgramLibraryWidget();
 
 public slots:
-    void previewSelected(const QModelIndex&);
+    void previewSelected( const QModelIndex& );
 
 private:
     QFileSystemModel* m_fileSystemModel;
+
     QTreeView* m_treeView;
+
     QPlainTextEdit *m_progranPreviewText;
 };
 

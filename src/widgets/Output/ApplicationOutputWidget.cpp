@@ -30,14 +30,14 @@ namespace Output {
 ApplicationOutputWidget::ApplicationOutputWidget()
     :m_outputPlainTxtEdt( 0 )
 {
-    m_outputPlainTxtEdt = new QPlainTextEdit(this);
+    m_outputPlainTxtEdt = new QPlainTextEdit( this );
 
-    m_outputPlainTxtEdt->setFrameStyle(QFrame::NoFrame);
+    m_outputPlainTxtEdt->setFrameStyle( QFrame::NoFrame );
     QVBoxLayout *vBoxLayout = new QVBoxLayout;
-    vBoxLayout->setContentsMargins(0,0,0,0);
-    vBoxLayout->addWidget(m_outputPlainTxtEdt);
+    vBoxLayout->setContentsMargins( 0, 0, 0, 0 );
+    vBoxLayout->addWidget( m_outputPlainTxtEdt );
 
-    this->setLayout(vBoxLayout);
+    this->setLayout( vBoxLayout );
 }
 
 ApplicationOutputWidget::~ApplicationOutputWidget()
