@@ -21,7 +21,6 @@
 ***************************************************************************/
 #pragma once
 
-
 class FileBrowserController
 {
 public:
@@ -30,9 +29,9 @@ public:
 private:
     FileBrowserController();
 
-    FileBrowserController(FileBrowserController const&){}
+    FileBrowserController( FileBrowserController const& ){}
 
-    FileBrowserController& operator=(FileBrowserController const&){}
+    FileBrowserController& operator = ( FileBrowserController const& ){}
 
     static FileBrowserController* m_pInstance;
 };

@@ -62,6 +62,7 @@ int main(int argc, char *argv[])
     }
 #endif
 
+    mainWin.checkWorkspace();
     app.setStyle(QStyleFactory::create("fusion"));
     return app.exec();
 }

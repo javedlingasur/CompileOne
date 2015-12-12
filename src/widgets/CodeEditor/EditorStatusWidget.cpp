@@ -23,11 +23,9 @@
 #include "EditorStatusWidget.h"
 #include "ui_EditorStatusWidget.h"
 
-#include <QDebug>
-
-EditorStatusWidget::EditorStatusWidget(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::EditorStatusWidget)
+EditorStatusWidget::EditorStatusWidget( QWidget *parent )
+    : QWidget(parent)
+    , ui(new Ui::EditorStatusWidget)
 {
     ui->setupUi(this);
 }
@@ -39,8 +37,8 @@ EditorStatusWidget::~EditorStatusWidget()
 
 void EditorStatusWidget::update( int line, int column )
 {
-    ui->m_lineNoLbl->setText(QString::number(line + 1));
-    ui->m_columNoLbl->setText(QString::number(column));
+    ui->m_lineNoLbl->setText( QString::number( line + 1 ));
+    ui->m_columNoLbl->setText( QString::number( column ));
 }
 
 

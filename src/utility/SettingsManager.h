@@ -31,16 +31,16 @@ public:
 private:
     SettingsManager();
 
-    SettingsManager(SettingsManager const&){}
+    SettingsManager( SettingsManager const& ){}
 
-    SettingsManager& operator=(SettingsManager const&){}
+    SettingsManager& operator = ( SettingsManager const& ) {}
 
     static SettingsManager* m_pInstance;
 
 public:
     QVariant readSettings( const QString &key );
 
-    void writeSetting(const QString &key, const QVariant &variant);
+    void writeSetting( const QString &key, const QVariant &variant );
 
     void removeSettings( const QString &key );
 

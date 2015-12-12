@@ -21,9 +21,6 @@
 ***************************************************************************/
 #pragma once
 
-#include "../../utility/SettingsManager.h"
-
-//#include <QWidget>
 #include <QTreeView>
 #include <QFileSystemModel>
 
@@ -36,13 +33,14 @@ public:
     void setWorkspacePath( QString strPath );
 
 public slots:
-    void selection(const QModelIndex&);
+    void selection( const QModelIndex& );
 
 signals:
     void showFileInEditor( QString qstrFileName );
 
 private:
     QFileSystemModel* m_fileSystemModel;
+
     QTreeView* m_treeView;
 };
 

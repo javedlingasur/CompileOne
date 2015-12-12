@@ -4,7 +4,7 @@ FileBrowserController* FileBrowserController::m_pInstance = nullptr;
 
 FileBrowserController* FileBrowserController::Instance()
 {
-    if (!m_pInstance)
+    if ( !m_pInstance )
         m_pInstance = new FileBrowserController;
 
     return m_pInstance;

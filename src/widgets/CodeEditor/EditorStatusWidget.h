@@ -19,9 +19,7 @@
 *OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 *SOFTWARE.
 ***************************************************************************/
-
-#ifndef EDITORSTATUSWIDGET_H
-#define EDITORSTATUSWIDGET_H
+#pragma once
 
 #include <QWidget>
 
@@ -34,7 +32,7 @@ class EditorStatusWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit EditorStatusWidget(QWidget *parent = 0);
+    explicit EditorStatusWidget( QWidget *parent = 0 );
     ~EditorStatusWidget();
 
 public slots:
@@ -44,4 +42,3 @@ private:
     Ui::EditorStatusWidget *ui;
 };
 
-#endif // EDITORSTATUSWIDGET_H

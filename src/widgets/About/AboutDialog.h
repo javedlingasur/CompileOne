@@ -19,8 +19,7 @@
 *OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 *SOFTWARE.
 ***************************************************************************/
-#ifndef ABOUTDIALOG_H
-#define ABOUTDIALOG_H
+#pragma once
 
 #include <QDialog>
 
@@ -33,7 +32,7 @@ class AboutDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit AboutDialog(QWidget *parent = 0);
+    explicit AboutDialog( QWidget *parent = 0 );
     ~AboutDialog();
 
 private slots:
@@ -43,4 +42,3 @@ private:
     Ui::AboutDialog *ui;
 };
 
-#endif // ABOUTDIALOG_H

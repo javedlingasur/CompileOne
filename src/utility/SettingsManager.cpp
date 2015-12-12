@@ -5,7 +5,7 @@ SettingsManager* SettingsManager::m_pInstance = nullptr;
 
 SettingsManager* SettingsManager::Instance()
 {
-    if (!m_pInstance)
+    if( !m_pInstance )
         m_pInstance = new SettingsManager;
 
     return m_pInstance;
@@ -22,17 +22,18 @@ QVariant SettingsManager::readSettings( const QString &key )
     return m_QSettings->value( key );
 }
 
-void SettingsManager::writeSetting(const QString &key, const QVariant &variant)
+void SettingsManager::writeSetting( const QString &key,
+                                    const QVariant &variant )
 {
-    m_QSettings->setValue(key, variant);
+    m_QSettings->setValue( key, variant );
 }
 
-void SettingsManager::removeSettings(const QString &key)
+void SettingsManager::removeSettings( const QString &key )
 {
     m_QSettings->remove( key );
 }
 
-bool SettingsManager::hasSettings(const QString &key)
+bool SettingsManager::hasSettings( const QString &key )
 {
     return m_QSettings->value( key ).isNull() ? false : true;
 }
