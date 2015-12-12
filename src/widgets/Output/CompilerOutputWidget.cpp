@@ -45,5 +45,10 @@ CompilerOutputWidget::~CompilerOutputWidget()
 
 }
 
+void CompilerOutputWidget::setCompilerOutput(const QString &compilerOutput)
+{
+    m_outputPlainTxtEdt->appendPlainText( compilerOutput );
+}
+
 }
 }

@@ -38,6 +38,8 @@ public:
 
     QString getName() { return "Compiler Output"; }
 
+    void setCompilerOutput( const QString &compilerOutput );
+
 private:
     QPlainTextEdit* m_outputPlainTxtEdt;
 };

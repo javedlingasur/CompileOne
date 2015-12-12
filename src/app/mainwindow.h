@@ -23,7 +23,6 @@
 #pragma once
 
 #include <QMainWindow>
-#include "widgets/CodeEditor/CodeEditor.h"
 #include "widgets/FileBrowser/FileBrowserWidget.h"
 #include "widgets/Options/OptionsDialog.h"
 #include "widgets/About/AboutDialog.h"

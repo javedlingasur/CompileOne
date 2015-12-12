@@ -45,5 +45,11 @@ ApplicationOutputWidget::~ApplicationOutputWidget()
 
 }
 
+void Co::Output::ApplicationOutputWidget::setApplicationOutput(
+        const QString &applicationOutput )
+{
+    m_outputPlainTxtEdt->appendPlainText( applicationOutput );
+}
+
 }
 }

@@ -40,6 +40,8 @@ public:
 
     QString getName() { return "Application Output"; }
 
+    void setApplicationOutput( const QString &applicationOutput );
+
 private:
     QPlainTextEdit* m_outputPlainTxtEdt;
 };

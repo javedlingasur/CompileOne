@@ -59,7 +59,6 @@ MainWindow::MainWindow(QWidget *parent):
     m_ProgramLibraryDialog( 0 ),
     m_AddToLibraryWidget( 0 ),
     m_EditorStatusWidget( 0 )
-//  ,    m_OutputWidget( 0 )
 {
 //    setWindowFlags( Qt::FramelessWindowHint | Qt::WindowMinimizeButtonHint );
     this->setContentsMargins( 0, 0, 0, 0 );
@@ -74,27 +73,20 @@ MainWindow::MainWindow(QWidget *parent):
     QVBoxLayout *vBoxLayout = new QVBoxLayout;
     vBoxLayout->setContentsMargins(0,0,0,0);
 
-//    m_codeeditor = new CodeEditor();
-
-
 
     m_codeeditor = new QsciScintilla(this);
     m_codeeditor->setVerticalScrollBarPolicy( Qt::ScrollBarAlwaysOn);
     m_codeeditor->setHorizontalScrollBarPolicy( Qt::ScrollBarAlwaysOn);
     m_codeeditor->setAutoCompletionCaseSensitivity(true);
-//    m_codeeditor->setFrameShape(QFrame::NoFrame);
 
     m_EditorStatusWidget = new EditorStatusWidget(this);
 
-//    highlighter = new Highlighter(m_codeeditor->document());
     m_compileOutputText = new QPlainTextEdit();
     m_compileOutputText->setStyleSheet(QLatin1String("background-color: rgb(0, 0, 0);\n"
                                                      "color: rgb(255, 255, 0);"));
 
-//    m_OutputWidget = new OutputBaseWidget( this );
 
     vSplitter->addWidget(m_codeeditor);
-//    vSplitter->addWidget(m_OutputWidget);
     using namespace Co::Output;
     QWidget* outBaseWidget = new QWidget(this);
     QVBoxLayout *vBoxLayout1 = new QVBoxLayout;
@@ -538,6 +530,7 @@ QString MainWindow::strippedName(const QString &fullFileName)
 
 void MainWindow::compileCode()
 {
+
     QString program = SettingsManager::Instance()->readSettings(Settings::COMPILER_PATH).toString();
     QStringList arguments;
     arguments << curFile;
