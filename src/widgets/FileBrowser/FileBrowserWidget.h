@@ -20,10 +20,12 @@
 *SOFTWARE.
 ***************************************************************************/
 #pragma once
-#include "../../common/QtIncludes.h"
+
 #include "../../utility/SettingsManager.h"
 
-#include <QWidget>
+//#include <QWidget>
+#include <QTreeView>
+#include <QFileSystemModel>
 
 class FileBrowserWidget: public QWidget
 {

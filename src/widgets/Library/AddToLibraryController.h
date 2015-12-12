@@ -21,9 +21,15 @@
 ***************************************************************************/
 #pragma once
 
-#include "../../common/STDIncludes.h"
 #include "../../utility/SettingsManager.h"
-#include "../../common/CommonENums.h"
+
+enum FileOperations
+{
+    FILE_ALREADY_EXIST = 0,
+    FILE_SAVED_SUCCESSFULLY = 1,
+    FILE_COULD_NOT_BE_CREATED = 2,
+    FILE_OPERATION_DEFAULT = -1
+};
 
 class AddToLibraryController
 {

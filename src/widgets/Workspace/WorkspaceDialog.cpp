@@ -1,6 +1,8 @@
 #include "WorkspaceDialog.h"
 #include "ui_WorkspaceDialog.h"
 
+#include <QFileDialog>
+
 WorkspaceDialog::WorkspaceDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::WorkspaceDialog)

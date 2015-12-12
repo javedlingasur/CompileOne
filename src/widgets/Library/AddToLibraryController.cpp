@@ -1,5 +1,7 @@
 #include "AddToLibraryController.h"
 
+#include <fstream>
+
 AddToLibraryController* AddToLibraryController::m_pInstance = nullptr;
 
 AddToLibraryController* AddToLibraryController::Instance()

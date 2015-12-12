@@ -44,8 +44,9 @@
 
 #include "mainwindow.h"
 
-#include "core/CompileSource.h"
+#include "utility/SettingsManager.h"
 
+#include "widgets/Workspace/WorkspaceDialog.h"
 #include "widgets/Output/ErrorOutputWidget.h"
 #include "widgets/Output/CompilerOutputWidget.h"
 #include "widgets/Output/ApplicationOutputWidget.h"
@@ -61,14 +62,14 @@ MainWindow::MainWindow(QWidget *parent):
 //  ,    m_OutputWidget( 0 )
 {
 //    setWindowFlags( Qt::FramelessWindowHint | Qt::WindowMinimizeButtonHint );
-    this->setContentsMargins( 1, 1, 1, 1 );
+    this->setContentsMargins( 0, 0, 0, 0 );
     QWidget* baseEditorWidget = new QWidget(this);
 
     QSplitter *vSplitter = new QSplitter;
-    vSplitter->setFixedWidth(1);
+    vSplitter->setFixedWidth(0);
     vSplitter->setOrientation(Qt::Vertical);
-    vSplitter->setLineWidth(1);
-    vSplitter->setHandleWidth(1);
+    vSplitter->setLineWidth(0);
+    vSplitter->setHandleWidth(0);
 
     QVBoxLayout *vBoxLayout = new QVBoxLayout;
     vBoxLayout->setContentsMargins(0,0,0,0);
@@ -125,11 +126,11 @@ outBaseWidget->setLayout(vBoxLayout1);
     QWidget* baseWidget = new QWidget(this);
 
     QSplitter *hSplitter = new QSplitter;
-    hSplitter->setFixedWidth(1);
+    hSplitter->setFixedWidth(0);
     hSplitter->setOrientation(Qt::Horizontal);
-    hSplitter->setFrameShape(QFrame::Box);
-    hSplitter->setLineWidth(1);
-    hSplitter->setHandleWidth(1);
+    hSplitter->setFrameShape(QFrame::NoFrame);
+    hSplitter->setLineWidth(0);
+    hSplitter->setHandleWidth(0);
 
     QHBoxLayout *hBoxLayout = new QHBoxLayout;
     hBoxLayout->setContentsMargins(0,0,0,0);
@@ -330,6 +331,22 @@ void MainWindow::createActions()
     optionsAct->setShortcut(QKeySequence(Qt::Key_O + Qt::CTRL));
     optionsAct->setStatusTip(tr("Show the options window"));
     connect(optionsAct, SIGNAL(triggered()), this, SLOT(options()));
+
+    showFileToolbarAct  = new QAction(tr("File"),this);
+    showFileToolbarAct->setCheckable(true);
+    connect(showFileToolbarAct,SIGNAL(toggled(bool)),this,SLOT(showFileToolbar(bool)));
+
+    showEditToolbarAct  = new QAction(tr("Edit"),this);
+    showEditToolbarAct->setCheckable(true);
+    connect(showEditToolbarAct,SIGNAL(toggled(bool)),this,SLOT(showEditToolbar(bool)));
+
+    showBuildToolbarAct = new QAction(tr("Build"),this);
+    showBuildToolbarAct->setCheckable(true);
+    connect(showBuildToolbarAct,SIGNAL(toggled(bool)),this,SLOT(showBuildToolbar(bool)));
+
+    showLibToolbarAct   = new QAction(tr("Library"),this);
+    showLibToolbarAct->setCheckable(true);
+    connect(showLibToolbarAct,SIGNAL(toggled(bool)),this,SLOT(showLibToolbar(bool)));
 }
 
 void MainWindow::createMenus()
@@ -350,6 +367,13 @@ void MainWindow::createMenus()
     editMenu->addAction(undoAct);
     editMenu->addAction(redoAct);
 
+    viewMenu = menuBar()->addMenu(tr("&View"));
+    shoeToolBar = viewMenu->addMenu(tr("Toolbar"));
+    shoeToolBar->addAction(showFileToolbarAct );
+    shoeToolBar->addAction(showEditToolbarAct );
+    shoeToolBar->addAction(showBuildToolbarAct);
+    shoeToolBar->addAction(showLibToolbarAct  );
+
     buildMenu = menuBar()->addMenu(tr("&Build"));
     buildMenu->addAction(compileAct);
     buildMenu->addAction(runAct);
@@ -369,40 +393,49 @@ void MainWindow::createMenus()
 void MainWindow::createToolBars()
 {
     fileToolBar = addToolBar(tr("File"));
+    fileToolBar->setAllowedAreas(Qt::LeftToolBarArea);
     fileToolBar->addAction(newAct);
     fileToolBar->addAction(openAct);
     fileToolBar->addAction(saveAct);
-
     fileToolBar->setStyleSheet(QLatin1String("height: 14px;\n"
                                              "width: 14px;"));
+    this->addToolBar(Qt::LeftToolBarArea,fileToolBar);
+    connect(fileToolBar,SIGNAL(visibilityChanged(bool)),this,SLOT(setShowFileToolbarAct(bool)));
 
     editToolBar = addToolBar(tr("Edit"));
+    editToolBar->setAllowedAreas(Qt::LeftToolBarArea);
     editToolBar->addAction(cutAct);
     editToolBar->addAction(copyAct);
     editToolBar->addAction(pasteAct);
-
     editToolBar->setStyleSheet(QLatin1String("height: 14px;\n"
                                              "width: 14px;"));
+    this->addToolBar(Qt::LeftToolBarArea,editToolBar);
+    connect(editToolBar,SIGNAL(visibilityChanged(bool)),this,SLOT(setShowEditToolbarAct(bool)));
 
     buildToolBar = addToolBar(tr("Build"));
+    buildToolBar->setAllowedAreas(Qt::LeftToolBarArea);
     buildToolBar->addAction(compileAct);
     buildToolBar->addAction(runAct);
-
     buildToolBar->setStyleSheet(QLatin1String("height: 14px;\n"
                                               "width: 14px;"));
+    this->addToolBar(Qt::LeftToolBarArea,buildToolBar);
+    connect(buildToolBar,SIGNAL(visibilityChanged(bool)),this,SLOT(setShowBuildToolbarAct(bool)));
 
     LibraryToolBar = addToolBar(tr("Library"));
+    LibraryToolBar->setAllowedAreas(Qt::LeftToolBarArea);
     LibraryToolBar->addAction(openLibraryAct);
     LibraryToolBar->addAction(addToLibAct);
-
     LibraryToolBar->setStyleSheet(QLatin1String("height: 14px;\n"
                                               "width: 14px;"));
+    this->addToolBar(Qt::LeftToolBarArea,LibraryToolBar);
+    connect(LibraryToolBar,SIGNAL(visibilityChanged(bool)),this,SLOT(setShowLibToolbarAct(bool)));
 }
 
 void MainWindow::createStatusBar()
 {
     statusBar()->addPermanentWidget(m_EditorStatusWidget,0);
     statusBar()->showMessage(tr("Ready"));
+//    statusBar()->
 }
 
 void MainWindow::readSettings()
@@ -524,6 +557,26 @@ QStringList MainWindow::parseErrorMessage( const QString &compilerOutpur )
     QStringList compilerOutputLines = compilerOutpur.split( "\n" );
 
     return compilerOutputLines;
+}
+
+void MainWindow::checkWorkspace()
+{
+    QString qstrWorkPath = SettingsManager::Instance()->readSettings( Settings::WORKSPACE_PATH ).toString();
+    if( qstrWorkPath.isEmpty() )
+    {
+        qDebug()<<" WORKSPACE_FILE not found!!";
+        WorkspaceDialog workspaceDialog;
+        if( workspaceDialog.exec() == QDialog::Accepted )
+        {
+        }
+        else
+        {
+           qDebug()<<" PATH = "<< SettingsManager::Instance()->readSettings( Settings::WORKSPACE_PATH ).toString();
+           setWorkspacePath( SettingsManager::Instance()->readSettings( Settings::WORKSPACE_PATH ).toString() );
+        }
+    }
+//    Thread::msleep(100);
+    setWorkspacePath( SettingsManager::Instance()->readSettings( Settings::WORKSPACE_PATH ).toString() );
 }
 
 void MainWindow::runCode()
@@ -711,4 +764,44 @@ void MainWindow::initializeFolding()
 
     m_codeeditor->setFolding(state);
 
+}
+
+void MainWindow::showFileToolbar(bool visible)
+{
+    fileToolBar->setVisible( visible );
+}
+
+void MainWindow::showEditToolbar(bool visible)
+{
+    editToolBar->setVisible( visible );
+}
+
+void MainWindow::showBuildToolbar(bool visible)
+{
+    buildToolBar->setVisible( visible );
+}
+
+void MainWindow::showLibToolbar(bool visible)
+{
+    LibraryToolBar->setVisible( visible );
+}
+
+void MainWindow::setShowFileToolbarAct(bool visible)
+{
+    showFileToolbarAct->setChecked( visible );
+}
+
+void MainWindow::setShowEditToolbarAct(bool visible)
+{
+    showEditToolbarAct->setChecked( visible );
+}
+
+void MainWindow::setShowBuildToolbarAct(bool visible)
+{
+    showBuildToolbarAct->setChecked( visible );
+}
+
+void MainWindow::setShowLibToolbarAct(bool visible)
+{
+    showLibToolbarAct->setChecked( visible );
 }

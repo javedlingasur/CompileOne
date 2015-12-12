@@ -1,5 +1,7 @@
 #include "OptionsDialog.h"
 
+#include <QBoxLayout>
+
 OptionsDialog::OptionsDialog( QWidget *parent )
                             : QDialog( parent ),
                               m_OptionsWidget( nullptr )

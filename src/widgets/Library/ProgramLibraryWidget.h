@@ -22,7 +22,9 @@
 #pragma once
 
 #include <QWidget>
-#include "../../common/QtIncludes.h"
+#include <QTreeView>
+#include <QFileSystemModel>
+#include <QPlainTextEdit>
 
 class ProgramLibraryWidget : public QWidget
 {

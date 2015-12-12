@@ -1,4 +1,5 @@
 #include "SettingsManager.h"
+#include <QApplication>
 
 SettingsManager* SettingsManager::m_pInstance = nullptr;
 
@@ -13,7 +14,6 @@ SettingsManager* SettingsManager::Instance()
 SettingsManager::SettingsManager()
 {
     m_strSettingsFile = QApplication::applicationDirPath() + "/compileOne.ini";
-    qDebug()<< "Settings Manager Path : "<< m_strSettingsFile;
     m_QSettings = new QSettings( m_strSettingsFile, QSettings::IniFormat );
 }
 

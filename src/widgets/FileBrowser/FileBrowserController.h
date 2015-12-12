@@ -21,7 +21,6 @@
 ***************************************************************************/
 #pragma once
 
-#include "../../common/STDIncludes.h"
 
 class FileBrowserController
 {

@@ -19,11 +19,9 @@
 *OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 *SOFTWARE.
 ***************************************************************************/
-#ifndef ADDTOLIBRARYWIDGET_H
-#define ADDTOLIBRARYWIDGET_H
+#pragma once
 
-#include "../../common/QtIncludes.h"
-#include "../../common/CommonENums.h"
+#include <QDialog>
 #include "../../utility/SettingsManager.h"
 #include "AddToLibraryController.h"
 
@@ -49,5 +47,3 @@ private slots:
 private:
     Ui::AddToLibraryWidget *ui;
 };
-
-#endif // ADDTOLIBRARYWIDGET_H

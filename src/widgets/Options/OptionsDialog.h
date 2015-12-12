@@ -21,8 +21,8 @@
 ***************************************************************************/
 #pragma once
 
-#include "../../common/QtIncludes.h"
 #include "OptionsWidget.h"
+#include <QDialog>
 
 class OptionsDialog : public QDialog
 {

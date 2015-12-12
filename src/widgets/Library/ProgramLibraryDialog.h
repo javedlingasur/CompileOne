@@ -21,7 +21,7 @@
 ***************************************************************************/
 #pragma once
 
-#include "../../common/QtIncludes.h"
+#include <QDialog>
 #include "ProgramLibraryToolbar.h"
 #include "ProgramLibraryWidget.h"
 

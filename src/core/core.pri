@@ -1,10 +1,6 @@
 INCLUDEPATH += . ..
 
-HEADERS += \
-    $$PWD/CompileSource.h \
-    $$PWD/SourceFileUtility.h
+HEADERS +=
 
-SOURCES += \
-    $$PWD/CompileSource.cpp \
-    $$PWD/SourceFileUtility.cpp
+SOURCES +=
 

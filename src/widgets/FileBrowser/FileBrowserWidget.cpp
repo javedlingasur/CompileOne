@@ -1,12 +1,15 @@
 #include "FileBrowserWidget.h"
 #include "FileBrowserController.h"
 
+#include <QBoxLayout>
+#include <QDebug>
+
 FileBrowserWidget::FileBrowserWidget( QWidget *parent )
 {
     FileBrowserController::Instance();
 
     QVBoxLayout *vBoxLayout = new QVBoxLayout;
-    vBoxLayout->setContentsMargins(1,1,1,1);
+    vBoxLayout->setContentsMargins(0,0,0,0);
 
     m_fileSystemModel = new QFileSystemModel(this);
     QString strWorkPath = SettingsManager::Instance()->readSettings( Settings::WORKSPACE_PATH ).toString();
@@ -33,8 +36,8 @@ FileBrowserWidget::FileBrowserWidget( QWidget *parent )
     m_treeView->setGeometry(0,22,this->width(),this->height()-22);
     m_treeView->show();
 
-    m_treeView->setVerticalScrollBarPolicy( Qt::ScrollBarAlwaysOn);
-    m_treeView->setHorizontalScrollBarPolicy( Qt::ScrollBarAlwaysOn);
+//    m_treeView->setVerticalScrollBarPolicy( Qt::ScrollBarAlwaysOn);
+//    m_treeView->setHorizontalScrollBarPolicy( Qt::ScrollBarAlwaysOn);
 
     vBoxLayout->addWidget(m_treeView);
     this->setLayout(vBoxLayout);

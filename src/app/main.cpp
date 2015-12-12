@@ -39,58 +39,30 @@
 ****************************************************************************/
 
 #include <QApplication>
-
-#include "mainwindow.h"
-#include "utility/SettingsManager.h"
-#include "widgets/Workspace/WorkspaceDialog.h"
 #include <QStyleFactory>
 
-class Thread : public QThread
-{
-public:
-    static void msleep(int ms)
-    {
-        QThread::msleep(ms);
-    }
-};
+#include "mainwindow.h"
 
 int main(int argc, char *argv[])
 {
     Q_INIT_RESOURCE(application);
 
     QApplication app(argc, argv);
-    app.setOrganizationName("QtProject");
-    app.setApplicationName("Application Example");
+    app.setApplicationName("CompileOne");
     MainWindow mainWin;
     mainWin.show();
 
-    QString qstrWorkPath = SettingsManager::Instance()->readSettings( Settings::WORKSPACE_PATH ).toString();
-    if( qstrWorkPath.isEmpty() )
+#if 0
+    mainWin.checkWorkspace();
+    QFile file(":/skins/darkorange.qss");
+    if(file.open(QIODevice::ReadOnly | QIODevice::Text))
     {
-        qDebug()<<" WORKSPACE_FILE not found!!";
-        WorkspaceDialog workspaceDialog;
-        if( workspaceDialog.exec() == QDialog::Accepted )
-        {
-        }
-        else
-        {
-           qDebug()<<" PATH = "<< SettingsManager::Instance()->readSettings( Settings::WORKSPACE_PATH ).toString();
-           mainWin.setWorkspacePath( SettingsManager::Instance()->readSettings( Settings::WORKSPACE_PATH ).toString() );
-        }
+        app.setStyleSheet(file.readAll());
+        file.close();
     }
-//    Thread::msleep(100);
-    mainWin.setWorkspacePath( SettingsManager::Instance()->readSettings( Settings::WORKSPACE_PATH ).toString() );
-
-//    QFile file(":/skins/darkorange.qss");
-//        if(file.open(QIODevice::ReadOnly | QIODevice::Text))
-//        {
-//            app.setStyleSheet(file.readAll());
-//            file.close();
-//        }
-
+#endif
 
     app.setStyle(QStyleFactory::create("fusion"));
-
     return app.exec();
 }
 

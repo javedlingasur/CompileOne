@@ -20,12 +20,10 @@
 *SOFTWARE.
 ***************************************************************************/
 
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#pragma once
 
 #include <QMainWindow>
 #include "widgets/CodeEditor/CodeEditor.h"
-#include "common/QtIncludes.h"
 #include "widgets/FileBrowser/FileBrowserWidget.h"
 #include "widgets/Options/OptionsDialog.h"
 #include "widgets/About/AboutDialog.h"
@@ -39,6 +37,7 @@ using namespace Co::Output;
 #include <Qsci/qsciscintilla.h>
 #include <Qsci/qscilexercpp.h>
 
+#include <QProcess>
 QT_BEGIN_NAMESPACE
 class QAction;
 class QMenu;
@@ -72,6 +71,16 @@ private slots:
 
     void showFileInEditor( QString qstrFileName );
 
+    void showFileToolbar( bool visible );
+    void showEditToolbar( bool visible );
+    void showBuildToolbar( bool visible );
+    void showLibToolbar( bool visible );
+
+    void setShowFileToolbarAct( bool visible );
+    void setShowEditToolbarAct( bool visible );
+    void setShowBuildToolbarAct( bool visible );
+    void setShowLibToolbarAct( bool visible );
+
 public:
     void initializeEditor();
     void initializeLexer();
@@ -80,6 +89,8 @@ public:
     void initializeCaretLine();
     void initializeFont();
     QStringList parseErrorMessage( const QString &compilerOutpur );
+
+    void checkWorkspace();
 
 public slots:
     void onTextChanged();
@@ -102,14 +113,23 @@ private:
 
     QMenu *fileMenu;
     QMenu *editMenu;
+    QMenu *viewMenu;
     QMenu *buildMenu;
     QMenu *toolsMenu;
     QMenu *LibraryMenu;
     QMenu *helpMenu;
+
+    QMenu *shoeToolBar;
+    QAction *showFileToolbarAct;
+    QAction *showEditToolbarAct;
+    QAction *showBuildToolbarAct;
+    QAction *showLibToolbarAct;
+
     QToolBar *fileToolBar;
     QToolBar *editToolBar;
     QToolBar *buildToolBar;
     QToolBar *LibraryToolBar;
+
     QAction *newAct;
     QAction *openAct;
     QAction *saveAct;
@@ -128,7 +148,7 @@ private:
     QAction *runAct;
     QAction *optionsAct;
 
-//    CodeEditor* m_codeeditor;
+
     QsciScintilla *m_codeeditor;
     QProcess* m_CMDProcess;
 
@@ -139,7 +159,6 @@ private:
     ProgramLibraryDialog *m_ProgramLibraryDialog;
     AddToLibraryWidget *m_AddToLibraryWidget;
 
-//    OutputBaseWidget* m_OutputWidget;
     EditorStatusWidget* m_EditorStatusWidget;
 
     OutputBaseWidget::ptr m_errorOutputWidget;
@@ -148,4 +167,3 @@ private:
     OutputBaseWidget::ptr m_clipBoardWidget;
 };
 
-#endif

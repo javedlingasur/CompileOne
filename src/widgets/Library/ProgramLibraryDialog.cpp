@@ -1,5 +1,7 @@
 #include "ProgramLibraryDialog.h"
 
+#include <QBoxLayout>
+
 ProgramLibraryDialog::ProgramLibraryDialog( QWidget *parent )
                             : QDialog( parent ),
                               m_ProgramLibraryWidget( nullptr ),

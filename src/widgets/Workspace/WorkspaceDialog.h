@@ -23,7 +23,6 @@
 #define WORKSPACEDIALOG_H
 
 #include <QDialog>
-#include "../../common/QtIncludes.h"
 #include "../../utility/SettingsManager.h"
 
 namespace Ui {

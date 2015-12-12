@@ -1,6 +1,9 @@
 #include "AddToLibraryWidget.h"
 #include "ui_AddToLibraryWidget.h"
 
+#include <QFileDialog>
+#include <QMessageBox>
+
 AddToLibraryWidget::AddToLibraryWidget(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::AddToLibraryWidget)

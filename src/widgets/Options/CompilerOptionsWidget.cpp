@@ -24,6 +24,7 @@
 #include "ui_CompilerOptionsWidget.h"
 
 #include <QDebug>
+#include <QFileDialog>
 
 #include "utility/SettingsManager.h"
 

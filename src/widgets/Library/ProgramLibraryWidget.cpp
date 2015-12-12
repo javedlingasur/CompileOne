@@ -1,5 +1,10 @@
 #include "ProgramLibraryWidget.h"
 
+#include <QSplitter>
+#include <QBoxLayout>
+#include <QTextStream>
+#include <QFile>
+
 ProgramLibraryWidget::ProgramLibraryWidget(QWidget *parent) :
     QWidget(parent)
 {

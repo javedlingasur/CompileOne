@@ -21,8 +21,7 @@
 ***************************************************************************/
 #pragma once
 
-#include "../common/STDIncludes.h"
-#include "../common/QtIncludes.h"
+#include <QSettings>
 
 class SettingsManager
 {
